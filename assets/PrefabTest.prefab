@@ -1,0 +1,198 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "",
+    "_objFlags": 0,
+    "_native": "",
+    "data": {
+      "__id__": 1
+    },
+    "optimizationPolicy": 0,
+    "asyncLoadAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "PrefabTest",
+    "_objFlags": 0,
+    "_parent": null,
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_prefab": {
+      "__id__": 3
+    },
+    "_id": "",
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_opacityModifyRGB": false,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "35db9nEfuNNz5g+s3cYGZ6v",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "toplist_popup": {
+      "__uuid__": "9821c2a6-22bf-463c-843f-47d46dcee975"
+    },
+    "toprich_popup": {
+      "__uuid__": "c2c550f5-58d0-475c-9fce-11485ee19352"
+    },
+    "topgame_popup": {
+      "__uuid__": "e867b51a-cc53-4f70-8491-6e9365f36cba"
+    },
+    "setting_popup": {
+      "__uuid__": "95798be7-49b5-43e1-b0c3-710753e0f955"
+    },
+    "card_prefab": {
+      "__uuid__": "f2f4a811-631c-4a17-8e63-8bac7ce3c02c"
+    },
+    "freechip_popup": {
+      "__uuid__": "fbed5a08-6011-455f-809a-c204c0ea2c57"
+    },
+    "profile_popup": {
+      "__uuid__": "1f2a2ec1-0025-4616-b472-1f51813edbd9"
+    },
+    "mail_popup": {
+      "__uuid__": "d53c7042-3726-4259-85e3-3be32465fd39"
+    },
+    "lobby_prefab": {
+      "__uuid__": "9aaa5ceb-872b-4df4-bd2d-efe91f86bd6f"
+    },
+    "chat_world_popup": {
+      "__uuid__": "7f2401d0-415b-4d3d-9fdc-386dab098f54"
+    },
+    "giftcode_popup": {
+      "__uuid__": "acf214a8-a2c0-43e7-a796-6c9b77acfe84"
+    },
+    "friend_profile_popup": {
+      "__uuid__": "3a0930de-83c1-48e0-87df-cf20c3d94e5c"
+    },
+    "friend_view_popup": {
+      "__uuid__": "ffc0cb3e-4999-4192-bc8e-09d7d665cd92"
+    },
+    "friend_info_popup": {
+      "__uuid__": "3a0930de-83c1-48e0-87df-cf20c3d94e5c"
+    },
+    "info_player_popup": {
+      "__uuid__": "d55746e2-0f6c-4c6a-afd4-5dda55b4cfe6"
+    },
+    "rankPopup": null,
+    "shop_popup": {
+      "__uuid__": "48b960af-e6b0-4312-a011-148c56d5b4cf"
+    },
+    "daily_popup": {
+      "__uuid__": "945588e9-00fb-47b4-bd59-3a1cfd8a8a95"
+    },
+    "feedback_popup": {
+      "__uuid__": "aa69e361-fa41-46b3-afe9-cc462065b376"
+    },
+    "missionView": {
+      "__uuid__": "0cdf7333-4480-491e-9352-0407f9a47b56"
+    },
+    "cameraSnap": null,
+    "itemLobby": {
+      "__uuid__": "244bbf07-4219-4e19-8fce-15d52738f030"
+    },
+    "itemRich": {
+      "__uuid__": "968baea2-32fe-4c44-916e-fc3db134931b"
+    },
+    "itemGame": {
+      "__uuid__": "afbd6038-bed5-4bc0-8a23-f96d361c8c0c"
+    },
+    "itemFriend": {
+      "__uuid__": "fbfd1ea4-3dc6-49c5-955d-788e66cacd46"
+    },
+    "itemAvatar": {
+      "__uuid__": "93b6ee9c-1deb-4568-8b12-23bc0373ed13"
+    },
+    "itemFreeChip": {
+      "__uuid__": "4a5e8a3c-ffa2-401d-bfa8-44d3c1b9ce49"
+    },
+    "itemMail": {
+      "__uuid__": "6e7d38f4-0c42-4a09-bfd6-b6144458569e"
+    },
+    "itemDaily": {
+      "__uuid__": "91490b78-0ccd-4044-a965-fdfa17f835c7"
+    },
+    "itemHisGift": {
+      "__uuid__": "5afdc0a1-8c9e-4a93-8028-50bd133607bb"
+    },
+    "itemJackPot": {
+      "__uuid__": "8693ae35-4dca-40c2-a238-1296e499da8a"
+    },
+    "giftView": {
+      "__uuid__": "385ac6f4-0a35-4594-9414-facd5a83f8b3"
+    },
+    "registerPop": {
+      "__uuid__": "4117a29d-80c9-4f22-8376-978643bafee6"
+    },
+    "quickChatCasino": {
+      "__uuid__": "702f4e4a-e339-4b6f-aeec-d00a97772e26"
+    },
+    "cashOutPop": {
+      "__uuid__": "2ea1ea95-2363-47e3-ba74-3879ba236f46"
+    },
+    "playerViewCasinoPf": {
+      "__uuid__": "74e6df21-5583-4d84-a5af-54c4aa2d45f2"
+    },
+    "groupOptionInGamePf": {
+      "__uuid__": "7cd94db5-4580-49dd-839f-5a6f8effbb19"
+    },
+    "chipOnline": {
+      "__uuid__": "19b680df-11fb-4fd9-ba65-08ba2f519db7"
+    },
+    "ketview_popup": {
+      "__uuid__": "4cd15b88-1a73-4ef9-81d1-d0b42056947e"
+    }
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "3c6adba0-e33f-4bad-96df-41ff70fed6d1"
+    },
+    "fileId": "916eAjJf1Cg6GbEF7byH0u",
+    "sync": false
+  }
+]

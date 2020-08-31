@@ -1,0 +1,241 @@
+{
+"skeleton": { "hash": "NIJsOvbEl4l9euSjoK8kl/SeZW8", "spine": "3.6.53", "width": 271, "height": 270, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Layer 56", "parent": "root", "length": 34.32, "rotation": 130.6, "x": -48.78, "y": 16.62 },
+	{ "name": "Layer 56 copy", "parent": "root", "length": 29.5, "rotation": 165.38, "x": -50.02, "y": -25.57 },
+	{ "name": "bg", "parent": "root", "length": 66.91, "rotation": 89.05, "x": 44.76, "y": -3.72 },
+	{ "name": "khung", "parent": "root", "x": -50.79 },
+	{ "name": "khung2", "parent": "root", "x": 50.79, "scaleX": -1 }
+],
+"slots": [
+	{ "name": "khungneon", "bone": "root", "attachment": "khungneon" },
+	{ "name": "khung/01_00000", "bone": "khung", "attachment": "khung/01_00029" },
+	{ "name": "khung/01_0", "bone": "khung2", "attachment": "khung/01_00029" },
+	{ "name": "text", "bone": "root", "attachment": "text" },
+	{ "name": "textneon", "bone": "root", "attachment": "textneon" },
+	{ "name": "bg", "bone": "bg", "attachment": "bg" },
+	{ "name": "Layer 56", "bone": "Layer 56", "attachment": "Layer 56" },
+	{ "name": "Layer 56 copy", "bone": "Layer 56 copy", "attachment": "Layer 56 copy" }
+],
+"skins": {
+	"default": {
+		"Layer 56": {
+			"Layer 56": { "x": 19.42, "y": -1.15, "rotation": -130.6, "width": 52, "height": 52 }
+		},
+		"Layer 56 copy": {
+			"Layer 56 copy": { "x": 14.01, "y": -2.42, "rotation": -165.38, "width": 44, "height": 22 }
+		},
+		"bg": {
+			"bg": { "x": 34.09, "y": 17.58, "rotation": -89.05, "width": 152, "height": 144 }
+		},
+		"khung/01_0": {
+			"khung/01_00000": { "width": 103, "height": 204 },
+			"khung/01_00001": { "width": 103, "height": 204 },
+			"khung/01_00002": { "width": 103, "height": 204 },
+			"khung/01_00003": { "width": 103, "height": 204 },
+			"khung/01_00004": { "width": 103, "height": 204 },
+			"khung/01_00005": { "width": 103, "height": 204 },
+			"khung/01_00006": { "width": 103, "height": 204 },
+			"khung/01_00007": { "width": 103, "height": 204 },
+			"khung/01_00008": { "width": 103, "height": 204 },
+			"khung/01_00009": { "width": 103, "height": 204 },
+			"khung/01_00010": { "width": 103, "height": 204 },
+			"khung/01_00011": { "width": 103, "height": 204 },
+			"khung/01_00012": { "width": 103, "height": 204 },
+			"khung/01_00013": { "width": 103, "height": 204 },
+			"khung/01_00014": { "width": 103, "height": 204 },
+			"khung/01_00015": { "width": 103, "height": 204 },
+			"khung/01_00016": { "width": 103, "height": 204 },
+			"khung/01_00017": { "width": 103, "height": 204 },
+			"khung/01_00018": { "width": 103, "height": 204 },
+			"khung/01_00019": { "width": 103, "height": 204 },
+			"khung/01_00020": { "width": 103, "height": 204 },
+			"khung/01_00021": { "width": 103, "height": 204 },
+			"khung/01_00022": { "width": 103, "height": 204 },
+			"khung/01_00023": { "width": 103, "height": 204 },
+			"khung/01_00024": { "width": 103, "height": 204 },
+			"khung/01_00025": { "width": 103, "height": 204 },
+			"khung/01_00026": { "width": 103, "height": 204 },
+			"khung/01_00027": { "width": 103, "height": 204 },
+			"khung/01_00028": { "width": 103, "height": 204 },
+			"khung/01_00029": { "width": 103, "height": 204 }
+		},
+		"khung/01_00000": {
+			"khung/01_00000": { "width": 103, "height": 204 },
+			"khung/01_00001": { "width": 103, "height": 204 },
+			"khung/01_00002": { "width": 103, "height": 204 },
+			"khung/01_00003": { "width": 103, "height": 204 },
+			"khung/01_00004": { "width": 103, "height": 204 },
+			"khung/01_00005": { "width": 103, "height": 204 },
+			"khung/01_00006": { "width": 103, "height": 204 },
+			"khung/01_00007": { "width": 103, "height": 204 },
+			"khung/01_00008": { "width": 103, "height": 204 },
+			"khung/01_00009": { "width": 103, "height": 204 },
+			"khung/01_00010": { "width": 103, "height": 204 },
+			"khung/01_00011": { "width": 103, "height": 204 },
+			"khung/01_00012": { "width": 103, "height": 204 },
+			"khung/01_00013": { "width": 103, "height": 204 },
+			"khung/01_00014": { "width": 103, "height": 204 },
+			"khung/01_00015": { "width": 103, "height": 204 },
+			"khung/01_00016": { "width": 103, "height": 204 },
+			"khung/01_00017": { "width": 103, "height": 204 },
+			"khung/01_00018": { "width": 103, "height": 204 },
+			"khung/01_00019": { "width": 103, "height": 204 },
+			"khung/01_00020": { "width": 103, "height": 204 },
+			"khung/01_00021": { "width": 103, "height": 204 },
+			"khung/01_00022": { "width": 103, "height": 204 },
+			"khung/01_00023": { "width": 103, "height": 204 },
+			"khung/01_00024": { "width": 103, "height": 204 },
+			"khung/01_00025": { "width": 103, "height": 204 },
+			"khung/01_00026": { "width": 103, "height": 204 },
+			"khung/01_00027": { "width": 103, "height": 204 },
+			"khung/01_00028": { "width": 103, "height": 204 },
+			"khung/01_00029": { "width": 103, "height": 204 }
+		},
+		"khungneon": {
+			"khungneon": { "width": 271, "height": 270 }
+		},
+		"text": {
+			"text": { "x": -1.93, "y": -42.71, "width": 88, "height": 79 }
+		},
+		"textneon": {
+			"textneon": { "x": -1.93, "y": -42.71, "width": 127, "height": 117 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"Layer 56": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.4, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00" }
+				]
+			},
+			"Layer 56 copy": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00" },
+					{ "time": 0.5667, "color": "ffffffff" },
+					{ "time": 0.9667, "color": "ffffff00" }
+				]
+			},
+			"khung/01_00000": {
+				"attachment": [
+					{ "time": 0, "name": "khung/01_00000" },
+					{ "time": 0.0333, "name": "khung/01_00001" },
+					{ "time": 0.0667, "name": "khung/01_00002" },
+					{ "time": 0.1, "name": "khung/01_00003" },
+					{ "time": 0.1333, "name": "khung/01_00004" },
+					{ "time": 0.1667, "name": "khung/01_00005" },
+					{ "time": 0.2, "name": "khung/01_00006" },
+					{ "time": 0.2333, "name": "khung/01_00007" },
+					{ "time": 0.2667, "name": "khung/01_00008" },
+					{ "time": 0.3, "name": "khung/01_00009" },
+					{ "time": 0.3333, "name": "khung/01_00010" },
+					{ "time": 0.3667, "name": "khung/01_00011" },
+					{ "time": 0.4, "name": "khung/01_00012" },
+					{ "time": 0.4333, "name": "khung/01_00013" },
+					{ "time": 0.4667, "name": "khung/01_00014" },
+					{ "time": 0.5, "name": "khung/01_00015" },
+					{ "time": 0.5333, "name": "khung/01_00016" },
+					{ "time": 0.5667, "name": "khung/01_00017" },
+					{ "time": 0.6, "name": "khung/01_00018" },
+					{ "time": 0.6333, "name": "khung/01_00019" },
+					{ "time": 0.6667, "name": "khung/01_00020" },
+					{ "time": 0.7, "name": "khung/01_00021" },
+					{ "time": 0.7333, "name": "khung/01_00022" },
+					{ "time": 0.7667, "name": "khung/01_00023" },
+					{ "time": 0.8, "name": "khung/01_00024" },
+					{ "time": 0.8333, "name": "khung/01_00025" },
+					{ "time": 0.8667, "name": "khung/01_00026" },
+					{ "time": 0.9, "name": "khung/01_00027" },
+					{ "time": 0.9333, "name": "khung/01_00028" },
+					{ "time": 0.9667, "name": "khung/01_00029" }
+				]
+			},
+			"khung/01_0": {
+				"attachment": [
+					{ "time": 0, "name": "khung/01_00000" },
+					{ "time": 0.0333, "name": "khung/01_00001" },
+					{ "time": 0.0667, "name": "khung/01_00002" },
+					{ "time": 0.1, "name": "khung/01_00003" },
+					{ "time": 0.1333, "name": "khung/01_00004" },
+					{ "time": 0.1667, "name": "khung/01_00005" },
+					{ "time": 0.2, "name": "khung/01_00006" },
+					{ "time": 0.2333, "name": "khung/01_00007" },
+					{ "time": 0.2667, "name": "khung/01_00008" },
+					{ "time": 0.3, "name": "khung/01_00009" },
+					{ "time": 0.3333, "name": "khung/01_00010" },
+					{ "time": 0.3667, "name": "khung/01_00011" },
+					{ "time": 0.4, "name": "khung/01_00012" },
+					{ "time": 0.4333, "name": "khung/01_00013" },
+					{ "time": 0.4667, "name": "khung/01_00014" },
+					{ "time": 0.5, "name": "khung/01_00015" },
+					{ "time": 0.5333, "name": "khung/01_00016" },
+					{ "time": 0.5667, "name": "khung/01_00017" },
+					{ "time": 0.6, "name": "khung/01_00018" },
+					{ "time": 0.6333, "name": "khung/01_00019" },
+					{ "time": 0.6667, "name": "khung/01_00020" },
+					{ "time": 0.7, "name": "khung/01_00021" },
+					{ "time": 0.7333, "name": "khung/01_00022" },
+					{ "time": 0.7667, "name": "khung/01_00023" },
+					{ "time": 0.8, "name": "khung/01_00024" },
+					{ "time": 0.8333, "name": "khung/01_00025" },
+					{ "time": 0.8667, "name": "khung/01_00026" },
+					{ "time": 0.9, "name": "khung/01_00027" },
+					{ "time": 0.9333, "name": "khung/01_00028" },
+					{ "time": 0.9667, "name": "khung/01_00029" }
+				]
+			},
+			"khungneon": {
+				"color": [
+					{ "time": 0, "color": "ffffff56" },
+					{ "time": 0.5, "color": "ffffffff" },
+					{ "time": 0.9667, "color": "ffffff56" }
+				]
+			},
+			"textneon": {
+				"color": [
+					{ "time": 0, "color": "ffffff5b" },
+					{ "time": 0.5, "color": "ffffffff" },
+					{ "time": 0.9667, "color": "ffffff87" }
+				]
+			}
+		},
+		"bones": {
+			"bg": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.5,
+						"x": 0,
+						"y": 7.03,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.9667, "x": 0, "y": 0 }
+				]
+			},
+			"Layer 56": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.8, "x": -15.94, "y": 18.6 }
+				]
+			},
+			"Layer 56 copy": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.9667, "x": -19.8, "y": 5.17 }
+				]
+			}
+		}
+	}
+}
+}

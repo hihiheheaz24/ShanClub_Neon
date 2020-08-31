@@ -1,0 +1,258 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 16
+  rotate: false
+  xy: 849, 702
+  size: 114, 110
+  orig: 114, 110
+  offset: 0, 0
+  index: -1
+Shape 1 copy 8
+  rotate: false
+  xy: 2, 13
+  size: 117, 123
+  orig: 117, 123
+  offset: 0, 0
+  index: -1
+bg
+  rotate: true
+  xy: 966, 815
+  size: 203, 54
+  orig: 203, 54
+  offset: 0, 0
+  index: -1
+khung/01_00000
+  rotate: false
+  xy: 231, 814
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00001
+  rotate: false
+  xy: 2, 344
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00002
+  rotate: false
+  xy: 119, 586
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00003
+  rotate: false
+  xy: 336, 814
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00004
+  rotate: false
+  xy: 2, 138
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00005
+  rotate: false
+  xy: 441, 814
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00006
+  rotate: false
+  xy: 546, 814
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00007
+  rotate: false
+  xy: 651, 814
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00008
+  rotate: false
+  xy: 756, 814
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00009
+  rotate: false
+  xy: 861, 814
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00010
+  rotate: true
+  xy: 231, 709
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00011
+  rotate: true
+  xy: 437, 709
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00012
+  rotate: true
+  xy: 643, 709
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00013
+  rotate: true
+  xy: 224, 604
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00014
+  rotate: true
+  xy: 430, 604
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00015
+  rotate: true
+  xy: 636, 604
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00016
+  rotate: true
+  xy: 224, 499
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00017
+  rotate: true
+  xy: 430, 499
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00018
+  rotate: true
+  xy: 636, 499
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00019
+  rotate: false
+  xy: 119, 380
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00020
+  rotate: true
+  xy: 224, 394
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00021
+  rotate: true
+  xy: 430, 394
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00022
+  rotate: true
+  xy: 636, 394
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00023
+  rotate: false
+  xy: 107, 174
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00024
+  rotate: false
+  xy: 842, 496
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00025
+  rotate: true
+  xy: 224, 289
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00026
+  rotate: true
+  xy: 430, 289
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00027
+  rotate: true
+  xy: 636, 289
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00028
+  rotate: false
+  xy: 842, 290
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00029
+  rotate: true
+  xy: 212, 184
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khungneon
+  rotate: false
+  xy: 2, 792
+  size: 227, 226
+  orig: 271, 270
+  offset: 22, 22
+  index: -1
+text
+  rotate: false
+  xy: 418, 210
+  size: 202, 77
+  orig: 202, 77
+  offset: 0, 0
+  index: -1
+textneon
+  rotate: true
+  xy: 2, 550
+  size: 240, 115
+  orig: 240, 115
+  offset: 0, 0
+  index: -1

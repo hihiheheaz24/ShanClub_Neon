@@ -1,0 +1,188 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2co
+  rotate: false
+  xy: 894, 856
+  size: 122, 158
+  orig: 122, 158
+  offset: 0, 0
+  index: -1
+2zo
+  rotate: true
+  xy: 724, 870
+  size: 144, 168
+  orig: 144, 168
+  offset: 0, 0
+  index: -1
+Levels 2
+  rotate: false
+  xy: 810, 825
+  size: 59, 43
+  orig: 59, 43
+  offset: 0, 0
+  index: -1
+Levels 3
+  rotate: false
+  xy: 286, 826
+  size: 216, 188
+  orig: 216, 188
+  offset: 0, 0
+  index: -1
+New folder/Layer 1
+  rotate: false
+  xy: 504, 776
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 10
+  rotate: false
+  xy: 468, 470
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 11
+  rotate: false
+  xy: 570, 470
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 12
+  rotate: false
+  xy: 672, 462
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 13
+  rotate: false
+  xy: 260, 403
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 14
+  rotate: false
+  xy: 260, 301
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 15
+  rotate: false
+  xy: 260, 199
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 2
+  rotate: false
+  xy: 606, 776
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 3
+  rotate: false
+  xy: 488, 674
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 4
+  rotate: false
+  xy: 590, 674
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 5
+  rotate: false
+  xy: 708, 768
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 6
+  rotate: false
+  xy: 692, 666
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 7
+  rotate: false
+  xy: 488, 572
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 8
+  rotate: false
+  xy: 590, 572
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+New folder/Layer 9
+  rotate: false
+  xy: 692, 564
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+inca
+  rotate: false
+  xy: 2, 505
+  size: 282, 509
+  orig: 294, 509
+  offset: 6, 0
+  index: -1
+light
+  rotate: false
+  xy: 2, 6
+  size: 256, 497
+  orig: 256, 497
+  offset: 0, 0
+  index: -1
+ll
+  rotate: false
+  xy: 286, 624
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+mo
+  rotate: false
+  xy: 260, 171
+  size: 26, 26
+  orig: 26, 26
+  offset: 0, 0
+  index: -1
+tat
+  rotate: false
+  xy: 810, 797
+  size: 26, 26
+  orig: 26, 26
+  offset: 0, 0
+  index: -1
+text
+  rotate: false
+  xy: 286, 525
+  size: 180, 97
+  orig: 180, 97
+  offset: 0, 0
+  index: -1
+textneon
+  rotate: false
+  xy: 504, 878
+  size: 218, 136
+  orig: 218, 136
+  offset: 0, 0
+  index: -1

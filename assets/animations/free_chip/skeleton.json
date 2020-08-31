@@ -1,0 +1,118 @@
+{
+"skeleton": { "hash": "Oj2amsqEeOdetOiOpE+xjN9tY8U", "spine": "3.6.53", "width": 100, "height": 100, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "TONG", "parent": "root" },
+	{ "name": "bone2", "parent": "root" },
+	{ "name": "zoay", "parent": "TONG" }
+],
+"slots": [
+	{ "name": "bg", "bone": "bone2", "attachment": "bg" },
+	{ "name": "Forma 1", "bone": "TONG", "attachment": "Forma 1" },
+	{ "name": "Forma 1 copy", "bone": "zoay", "attachment": "Forma 1 copy" },
+	{ "name": "Forma 2 copy", "bone": "zoay", "attachment": "Forma 2 copy" },
+	{ "name": "Forma", "bone": "TONG", "attachment": "Forma" }
+],
+"skins": {
+	"default": {
+		"Forma": {
+			"Forma": { "path": "Forma ", "width": 50, "height": 52 }
+		},
+		"Forma 1": {
+			"Forma 1": { "width": 50, "height": 52 }
+		},
+		"Forma 1 copy": {
+			"Forma 1 copy": { "width": 73, "height": 73 }
+		},
+		"Forma 2 copy": {
+			"Forma 2 copy": { "width": 73, "height": 73 }
+		},
+		"bg": {
+			"bg": { "width": 100, "height": 100 }
+		}
+	}
+},
+"animations": {
+	"run": {
+		"slots": {
+			"Forma": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 1.2, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.6, "color": "ffffff00" },
+					{ "time": 2.6667, "color": "ffffffff" }
+				]
+			},
+			"Forma 1": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 1.2, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.6, "color": "ffffffff" },
+					{ "time": 2.6667, "color": "ffffff00" }
+				]
+			},
+			"Forma 1 copy": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 1.2, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.6, "color": "ffffffff" },
+					{ "time": 2.6667, "color": "ffffff00" }
+				]
+			},
+			"Forma 2 copy": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 1.2, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.6, "color": "ffffff00" },
+					{ "time": 2.6667, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"zoay": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 1.3333, "angle": 180 },
+					{ "time": 2.6667, "angle": 0 }
+				]
+			},
+			"TONG": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.4667,
+						"x": 1.15,
+						"y": 1.15,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 2.6667, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"stay": {
+		"slots": {
+			"Forma": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Forma 1": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Forma 2 copy": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	}
+}
+}

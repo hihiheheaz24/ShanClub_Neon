@@ -1,0 +1,30 @@
+{
+  "ver": "2.0.0",
+  "uuid": "242120ec-b846-4369-b84e-8045190b6a23",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "NGW-logo": {
+      "ver": "1.0.3",
+      "uuid": "8142461a-9864-436d-807f-94b68634681a",
+      "rawTextureUuid": "242120ec-b846-4369-b84e-8045190b6a23",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 1.5,
+      "offsetY": 1.5,
+      "trimX": 3,
+      "trimY": 0,
+      "width": 585,
+      "height": 272,
+      "rawWidth": 588,
+      "rawHeight": 275,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

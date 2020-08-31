@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "870121447543",
+    "firebase_url": "https://shanclub.firebaseio.com",
+    "project_id": "shanclub",
+    "storage_bucket": "shanclub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870121447543:android:c4c2ca2831a53ffda2e672",
+        "android_client_info": {
+          "package_name": "csn.shan.club.online"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870121447543-tkq2msjdmo37c3cd13e18aq3sqictrq6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "csn.shan.club.online",
+            "certificate_hash": "c82752f0aa102fefc7c1641972e3a3abfa9d9b03"
+          }
+        },
+        {
+          "client_id": "870121447543-ko4kj30fkj3b33t6bne38n92kmr4dfpl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdOQ6fKMp7-liGvdyuqxZSsEaLBL50WnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870121447543-ko4kj30fkj3b33t6bne38n92kmr4dfpl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,27 @@
+
+skeleton.png
+size: 64,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ellipse 1 copy 6
+  rotate: false
+  xy: 2, 2
+  size: 9, 9
+  orig: 9, 9
+  offset: 0, 0
+  index: -1
+Ellipse 1 copy 6-1
+  rotate: false
+  xy: 46, 46
+  size: 9, 9
+  orig: 9, 9
+  offset: 0, 0
+  index: -1
+Ellipse 1 copy 6-2
+  rotate: false
+  xy: 2, 13
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1

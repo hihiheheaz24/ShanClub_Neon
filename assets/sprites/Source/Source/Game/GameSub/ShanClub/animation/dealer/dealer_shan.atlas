@@ -1,0 +1,125 @@
+
+dealer_shan.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+01ko
+  rotate: false
+  xy: 389, 50
+  size: 64, 92
+  orig: 64, 92
+  offset: 0, 0
+  index: -1
+02cam
+  rotate: false
+  xy: 455, 50
+  size: 64, 92
+  orig: 64, 92
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: false
+  xy: 2, 2
+  size: 41, 20
+  orig: 41, 20
+  offset: 0, 0
+  index: -1
+eye2
+  rotate: false
+  xy: 138, 44
+  size: 41, 20
+  orig: 41, 20
+  offset: 0, 0
+  index: -1
+lip1_chu
+  rotate: false
+  xy: 521, 123
+  size: 33, 19
+  orig: 33, 19
+  offset: 0, 0
+  index: -1
+lip2_smile
+  rotate: false
+  xy: 45, 5
+  size: 27, 17
+  orig: 27, 17
+  offset: 0, 0
+  index: -1
+model
+  rotate: false
+  xy: 2, 24
+  size: 134, 226
+  orig: 134, 226
+  offset: 0, 0
+  index: -1
+model2
+  rotate: false
+  xy: 138, 66
+  size: 160, 184
+  orig: 160, 184
+  offset: 0, 0
+  index: -1
+tayphai10
+  rotate: false
+  xy: 389, 144
+  size: 87, 106
+  orig: 87, 106
+  offset: 0, 0
+  index: -1
+tayphai2-copy
+  rotate: false
+  xy: 300, 143
+  size: 87, 107
+  orig: 87, 107
+  offset: 0, 0
+  index: -1
+tayphai3-copy
+  rotate: false
+  xy: 478, 144
+  size: 87, 106
+  orig: 87, 106
+  offset: 0, 0
+  index: -1
+tayphai4-copy
+  rotate: false
+  xy: 567, 144
+  size: 87, 106
+  orig: 87, 106
+  offset: 0, 0
+  index: -1
+tayphai5-copy
+  rotate: false
+  xy: 656, 144
+  size: 87, 106
+  orig: 87, 106
+  offset: 0, 0
+  index: -1
+tayphai6-copy
+  rotate: false
+  xy: 745, 144
+  size: 87, 106
+  orig: 87, 106
+  offset: 0, 0
+  index: -1
+tayphai7-copy
+  rotate: false
+  xy: 834, 144
+  size: 87, 106
+  orig: 87, 106
+  offset: 0, 0
+  index: -1
+tayphai8-copy
+  rotate: false
+  xy: 923, 144
+  size: 87, 106
+  orig: 87, 106
+  offset: 0, 0
+  index: -1
+tayphai9-copy
+  rotate: false
+  xy: 300, 35
+  size: 87, 106
+  orig: 87, 106
+  offset: 0, 0
+  index: -1

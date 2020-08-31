@@ -1,0 +1,30 @@
+{
+  "ver": "2.0.0",
+  "uuid": "081afe3e-37b2-47ac-807b-8fe9f65e5d8e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "ico_coin": {
+      "ver": "1.0.3",
+      "uuid": "6f8fbd00-24c7-4ca8-9b48-ba406a081aca",
+      "rawTextureUuid": "081afe3e-37b2-47ac-807b-8fe9f65e5d8e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 51,
+      "height": 56,
+      "rawWidth": 51,
+      "rawHeight": 56,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

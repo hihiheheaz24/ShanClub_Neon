@@ -1,0 +1,30 @@
+{
+  "ver": "2.0.0",
+  "uuid": "227abc8a-8280-4018-ade7-998b390d668c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "khung cuoc cuoi van": {
+      "ver": "1.0.3",
+      "uuid": "5e275285-db9a-4ae4-a181-c3d51ef41554",
+      "rawTextureUuid": "227abc8a-8280-4018-ade7-998b390d668c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 92,
+      "height": 35,
+      "rawWidth": 92,
+      "rawHeight": 35,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

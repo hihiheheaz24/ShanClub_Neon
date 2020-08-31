@@ -1,0 +1,328 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+10bich
+  rotate: false
+  xy: 212, 20
+  size: 60, 67
+  orig: 60, 67
+  offset: 0, 0
+  index: -1
+3bich
+  rotate: false
+  xy: 274, 25
+  size: 52, 62
+  orig: 52, 62
+  offset: 0, 0
+  index: -1
+3co
+  rotate: false
+  xy: 737, 417
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+3tep
+  rotate: false
+  xy: 914, 754
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: -1
+Ktep
+  rotate: false
+  xy: 737, 539
+  size: 62, 65
+  orig: 62, 65
+  offset: 0, 0
+  index: -1
+Kzo
+  rotate: false
+  xy: 966, 956
+  size: 56, 64
+  orig: 56, 64
+  offset: 0, 0
+  index: -1
+Qco
+  rotate: false
+  xy: 737, 477
+  size: 48, 60
+  orig: 48, 60
+  offset: 0, 0
+  index: -1
+Qtep
+  rotate: false
+  xy: 966, 829
+  size: 55, 61
+  orig: 55, 61
+  offset: 0, 0
+  index: -1
+Qzo
+  rotate: false
+  xy: 328, 28
+  size: 47, 59
+  orig: 47, 59
+  offset: 0, 0
+  index: -1
+abich
+  rotate: false
+  xy: 849, 747
+  size: 63, 67
+  orig: 63, 67
+  offset: 0, 0
+  index: -1
+jbich
+  rotate: false
+  xy: 966, 768
+  size: 48, 59
+  orig: 48, 59
+  offset: 0, 0
+  index: -1
+kbich
+  rotate: false
+  xy: 966, 892
+  size: 56, 62
+  orig: 56, 62
+  offset: 0, 0
+  index: -1
+khung/01_00000
+  rotate: false
+  xy: 231, 816
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00001
+  rotate: false
+  xy: 2, 432
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00002
+  rotate: false
+  xy: 336, 816
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00003
+  rotate: false
+  xy: 2, 226
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00004
+  rotate: false
+  xy: 107, 432
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00005
+  rotate: false
+  xy: 441, 816
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00006
+  rotate: false
+  xy: 2, 20
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00007
+  rotate: false
+  xy: 107, 226
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00008
+  rotate: false
+  xy: 546, 816
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00009
+  rotate: false
+  xy: 107, 20
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00010
+  rotate: false
+  xy: 651, 816
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00011
+  rotate: false
+  xy: 756, 816
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00012
+  rotate: false
+  xy: 861, 816
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00013
+  rotate: true
+  xy: 231, 711
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00014
+  rotate: true
+  xy: 437, 711
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00015
+  rotate: true
+  xy: 643, 711
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00016
+  rotate: true
+  xy: 223, 606
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00017
+  rotate: true
+  xy: 429, 606
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00018
+  rotate: true
+  xy: 635, 606
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00019
+  rotate: false
+  xy: 212, 400
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00020
+  rotate: false
+  xy: 212, 194
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00021
+  rotate: false
+  xy: 317, 400
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00022
+  rotate: false
+  xy: 317, 194
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00023
+  rotate: true
+  xy: 212, 89
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00024
+  rotate: false
+  xy: 422, 400
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00025
+  rotate: false
+  xy: 422, 194
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00026
+  rotate: false
+  xy: 527, 400
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00027
+  rotate: false
+  xy: 527, 194
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00028
+  rotate: true
+  xy: 418, 89
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00029
+  rotate: false
+  xy: 632, 400
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khungneon
+  rotate: false
+  xy: 2, 794
+  size: 227, 226
+  orig: 271, 270
+  offset: 22, 22
+  index: -1
+qbich
+  rotate: false
+  xy: 377, 30
+  size: 46, 57
+  orig: 46, 57
+  offset: 0, 0
+  index: -1
+text
+  rotate: true
+  xy: 632, 209
+  size: 189, 117
+  orig: 189, 117
+  offset: 0, 0
+  index: -1
+textneon
+  rotate: false
+  xy: 2, 638
+  size: 219, 154
+  orig: 219, 154
+  offset: 0, 0
+  index: -1

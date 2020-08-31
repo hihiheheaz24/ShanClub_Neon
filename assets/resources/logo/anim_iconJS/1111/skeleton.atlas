@@ -1,0 +1,258 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: false
+  xy: 231, 846
+  size: 163, 164
+  orig: 165, 166
+  offset: 1, 1
+  index: -1
+khung/01_00000
+  rotate: false
+  xy: 104, 578
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00001
+  rotate: true
+  xy: 396, 907
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00002
+  rotate: true
+  xy: 602, 907
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00003
+  rotate: true
+  xy: 808, 907
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00004
+  rotate: false
+  xy: 2, 339
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00005
+  rotate: false
+  xy: 2, 133
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00006
+  rotate: false
+  xy: 107, 372
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00007
+  rotate: false
+  xy: 107, 166
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00008
+  rotate: true
+  xy: 396, 802
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00009
+  rotate: true
+  xy: 602, 802
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00010
+  rotate: true
+  xy: 808, 802
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00011
+  rotate: false
+  xy: 209, 578
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00012
+  rotate: false
+  xy: 212, 372
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00013
+  rotate: false
+  xy: 212, 166
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00014
+  rotate: true
+  xy: 107, 61
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00015
+  rotate: false
+  xy: 314, 596
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00016
+  rotate: false
+  xy: 419, 596
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00017
+  rotate: false
+  xy: 524, 596
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00018
+  rotate: false
+  xy: 629, 596
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00019
+  rotate: false
+  xy: 734, 596
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00020
+  rotate: false
+  xy: 839, 596
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00021
+  rotate: false
+  xy: 317, 390
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00022
+  rotate: false
+  xy: 317, 184
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00023
+  rotate: false
+  xy: 422, 390
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00024
+  rotate: false
+  xy: 422, 184
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00025
+  rotate: false
+  xy: 527, 390
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00026
+  rotate: false
+  xy: 527, 184
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00027
+  rotate: false
+  xy: 632, 390
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00028
+  rotate: false
+  xy: 632, 184
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khung/01_00029
+  rotate: false
+  xy: 737, 390
+  size: 103, 204
+  orig: 103, 204
+  offset: 0, 0
+  index: -1
+khungneon
+  rotate: false
+  xy: 2, 784
+  size: 227, 226
+  orig: 271, 270
+  offset: 22, 22
+  index: -1
+text
+  rotate: true
+  xy: 944, 601
+  size: 199, 62
+  orig: 201, 64
+  offset: 1, 1
+  index: -1
+textneon
+  rotate: true
+  xy: 2, 545
+  size: 237, 100
+  orig: 239, 102
+  offset: 1, 1
+  index: -1
+tren
+  rotate: false
+  xy: 2, 70
+  size: 61, 61
+  orig: 63, 63
+  offset: 1, 1
+  index: -1
+trong
+  rotate: false
+  xy: 737, 277
+  size: 111, 111
+  orig: 113, 113
+  offset: 1, 1
+  index: -1
