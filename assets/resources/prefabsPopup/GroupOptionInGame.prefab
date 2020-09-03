@@ -525,7 +525,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 67,
-      "height": 40
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -554,7 +554,7 @@
     "_useOriginalSize": false,
     "_actualFontSize": 30,
     "_fontSize": 30,
-    "_lineHeight": 40,
+    "_lineHeight": 50,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -853,8 +853,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 200,
-      "height": 40
+      "width": 72,
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -883,8 +883,8 @@
     "_useOriginalSize": false,
     "_actualFontSize": 30,
     "_fontSize": 30,
-    "_lineHeight": 40,
-    "_enableWrapText": true,
+    "_lineHeight": 50,
+    "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
@@ -892,7 +892,7 @@
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 2
+    "_N$overflow": 0
   },
   {
     "__type__": "5fe30gstNJH078FQ83274Y8",
@@ -1182,8 +1182,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 200,
-      "height": 40
+      "width": 178,
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1212,8 +1212,8 @@
     "_useOriginalSize": false,
     "_actualFontSize": 30,
     "_fontSize": 30,
-    "_lineHeight": 40,
-    "_enableWrapText": true,
+    "_lineHeight": 50,
+    "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
@@ -1221,7 +1221,7 @@
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 2
+    "_N$overflow": 0
   },
   {
     "__type__": "5fe30gstNJH078FQ83274Y8",
@@ -2150,7 +2150,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 62,
-      "height": 40
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -2179,7 +2179,7 @@
     "_useOriginalSize": false,
     "_actualFontSize": 30,
     "_fontSize": 30,
-    "_lineHeight": 40,
+    "_lineHeight": 50,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,

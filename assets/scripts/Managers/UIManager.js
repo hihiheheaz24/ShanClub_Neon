@@ -40,6 +40,10 @@ var UIManager = cc.Class({
       default: null,
       type: cc.SpriteFrame
     },
+    font_zawi : {
+      default: null,
+      type: cc.Font
+    },
 
     time_enter_background: -1,
     fontAdd: {
@@ -522,10 +526,14 @@ var UIManager = cc.Class({
 
     var nnoLa = new cc.Node("Label");
     var lb = nnoLa.addComponent(cc.Label);
-    lb.fontSize = 30;
-    lb.lineHeight = 30;
-    lb.isSystemFontUsed = true;
+    lb.fontSize = 25;
+    lb.lineHeight = 55;
+    // lb.overFlow = 1;
+    //lb.isSystemFontUsed = true;
+    lb.horizontalAlign = 1;
+    lb.verticalAlign = 1;
     lb.string = message;
+    lb.font = this.font_zawi;
     toast.addChild(lb.node);
 
     //   toast.cascadeOpacity = true;

@@ -51,18 +51,29 @@ cc.Class({
     setItemLeft(data) {
         this.bkg_Right.active = false;
         this.bkg_Left.active = true;
-
         let name = data.name_player;
         if (name.length > 12) {
             name = name.substring(0, 10) + "...";
         }
-        this.lbNameL.string = name;
+        this.lbNameL.string = name + " :";
         let str = data.content;
-        // if(strTemp[1]== ""){
-        //     str = Global.decode(strTemp[0]);
-        // }
+
+        /////
+        var unified_emoji_ranges = ['\ud83c[\udf00-\udfff]', '\ud83d[\udc00-\ude4f]', '\ud83d[\ude80-\udeff]'];
+
+        var reg = new RegExp(unified_emoji_ranges.join('|'), 'g');
+
+        if (str.match(reg)) {
+            cc.log("emoji found");
+            this.lb_contentL.useSystemFont = true;
+            this.lb_contentL.fontSize = 35;
+            this.lb_contentL.lineHeight = 50;
+        }
+
+        ////////
 
         this.lb_contentL.string = str;
+
         this.changeSizeL();
         let time_ = new Date(data.time);
 
@@ -76,23 +87,36 @@ cc.Class({
         this.bkg_Left.active = false;
         this.bkg_Right.active = true;
 
-        let name = data.name_player;
+        let name = ": " + data.name_player;
         if (name.length > 12) {
             name = name.substring(0, 10) + "...";
         }
+
         this.lbNameR.string = name;
         let str = data.content;
+
+         /////
+         var unified_emoji_ranges = ['\ud83c[\udf00-\udfff]', '\ud83d[\udc00-\ude4f]', '\ud83d[\ude80-\udeff]'];
+
+         var reg = new RegExp(unified_emoji_ranges.join('|'), 'g');
+ 
+         if (str.match(reg)) {
+             cc.log("emoji found");
+             this.lb_contentR.useSystemFont = true;
+             this.lb_contentR.fontSize = 35;
+             this.lb_contentR.lineHeight = 50;
+         }
+ 
+         ////////
+ 
         this.lb_contentR.string = str;
         this.changeSizeR();
 
         let time_ = new Date(data.time);
-
         let min = time_.getMinutes();
         let hou = time_.getHours();
         let _time = (hou < 10 ? "0" + hou : hou) + ":" + (min < 10 ? "0" + min : min);
-
         this.lb_timeR.string = _time;
-
     },
 
     changeSizeR() {

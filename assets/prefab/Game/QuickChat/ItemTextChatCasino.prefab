@@ -107,7 +107,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 133,
+      "width": 131,
       "height": 40
     },
     "_rotationX": 0,
@@ -139,8 +139,10 @@
     "_fontSize": 25,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c33c7ebc-fad8-4c8f-9179-6318c2df6a35"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "Hi everyone",
     "_N$horizontalAlign": 1,

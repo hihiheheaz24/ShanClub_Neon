@@ -17,6 +17,8 @@ cc.Class({
     // },
     onEnable() {
         var lb = this.getComponent(cc.Label);
+        lb.font = require('UIManager').instance.font_zawi;
+
         if (lb === null) return;
         lb.string = GameManager.getInstance().getTextConfig(this.key);
         let list = GameManager.getInstance().listCCFS;

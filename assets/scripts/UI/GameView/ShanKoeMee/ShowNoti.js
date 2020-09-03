@@ -51,6 +51,9 @@ cc.Class({
         }
 
         this.Label.string = str;
+        this.Label.font = require('UIManager').instance.font_zawi;
+        this.Label.fontSize = 25;
+        this.Label.lineHeight = 40;
         this.BackGround.node.width = 16.5 * str.length;
 
         setTimeout(()=>{

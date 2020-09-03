@@ -1877,8 +1877,10 @@
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c33c7ebc-fad8-4c8f-9179-6318c2df6a35"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "mmmm",
     "_N$horizontalAlign": 1,

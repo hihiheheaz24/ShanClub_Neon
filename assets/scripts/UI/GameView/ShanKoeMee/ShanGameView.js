@@ -94,6 +94,10 @@ var ShanGameView = cc.Class({
             type: cc.Sprite,
         },
         isBanker: false,
+        node_chat :{
+            default : null,
+            type : cc.Node
+        },
     },
 
     onLoad (){
@@ -164,16 +168,14 @@ var ShanGameView = cc.Class({
         },500)
     },
 
-    handleJTable (strData){
+    handleJTable(strData) {
         this._super(strData);
-        cc.NGWlog("!> handleJTable",strData);
+        cc.NGWlog("!> handleJTable", strData);
         let data = JSON.parse(strData);
         require('SoundManager1').instance.dynamicallyPlayMusic(ResDefine.join_PLayer);
-        if(this.stateGame == STATE_GAME.WAITING){
-            let player = this.getPlayer(data.N);
-            this.activePlayer.push(player);
-            this.sortActivePlayer();
-        }
+        this.activePlayer = [...this.players]
+        this.sortActivePlayer();
+
     },
 
     handleRJTable (strData){
@@ -338,6 +340,7 @@ var ShanGameView = cc.Class({
                         //         this.buttons.destroy()
                         //     }
                         // })));
+                        this.node_chat.active = true;
                     }
                 }
                 
@@ -351,6 +354,7 @@ var ShanGameView = cc.Class({
                 }
             }
         }else{
+           cc.log('')
             this.sortActivePlayer();
             for(let i = 0; i < this.activePlayer.length; i ++){
                 this.showWaitAni(0,this.activePlayer[i]._indexDynamic);
@@ -373,18 +377,20 @@ var ShanGameView = cc.Class({
                 this.node.addChild(betButton.node,900,'BetButton');
                 betButton.setInfo(this.tableBaseBet,this.potValue,this.thisPlayer.ag);
                 this.buttons = betButton.node;
+                this.node_chat.active = false;
             }
         }
     },
 
-    fakeDealingEffect (){
-        cc.NGWlog("!> fake dealing card",this.activePlayer);
-        for(let i = 0; i < this.activePlayer.length; i++){
+    fakeDealingEffect(plNumb) {
+        cc.NGWlog("!> fake dealing card", this.activePlayer);
+        for (let i = 0; i < plNumb; i++) {
             this.setTimeout(() => {
+                if (this.node == null || typeof this.node == 'undefined' || this.activePlayer[i] == null) return;
                 this.dealingCardsForPlayer(this.activePlayer[i]);
                 require('SoundManager1').instance.dynamicallyPlayMusic('sounds/cardPlipBlackJack');
                 // require('SoundManager1').instance.dynamicallyPlayMusic(ResDefine.cardAudio);
-            },100 * i)
+            }, 100 * i)
         }
     },
 
@@ -563,29 +569,35 @@ var ShanGameView = cc.Class({
     },
 
     handleLc (data) {
-        cc.NGWlog("!> handlelc chia bai ",data,JSON.stringify(data));
+        cc.NGWlog("!> handlelc chia bai ", data, JSON.stringify(data));
+        this.codeArr = [];
         let cardsArr = data.arr;
         this.currentPoint = data.score;
         this.currentRate = data.rate;
-        this.setTimeout(()=>{
+        this.setTimeout(() => {
+            if (this.node == null || typeof this.node == 'undefined') return;
             let Hide = this.showHideBackGround();
             this.showCountDownClock(22);
-            for(let i = 0; i < this.thisPlayer.vectorCard.length; i++){
+            for (let i = 0; i < this.thisPlayer.vectorCard.length; i++) {
                 let card = this.thisPlayer.vectorCard[i];
-                card.runAction(cc.rotateTo(0.8,0).easing(cc.easeCubicActionOut()));
-                card.getComponent('Card').moveCardNoBug(0.8,cc.v2(0+i*7,50));
-                card.runAction(cc.scaleTo(0.8,2.4).easing(cc.easeCubicActionOut()));
-                card.runAction(cc.sequence(cc.delayTime(0.8),cc.scaleTo(0.2,0.1,2.5),cc.scaleTo(0.2,2.5).easing(cc.easeCubicActionOut()),cc.scaleTo(0.2,2.4).easing(cc.easeCubicActionOut())));
-                card.runAction(cc.sequence(cc.delayTime(0.8),cc.skewTo(0.2,0,15),cc.callFunc(()=>{card.skewY = -15}),cc.skewTo(0.2,0,0).easing(cc.easeCubicActionOut())));  
-                this.setTimeout(()=>{
-                    card.getComponent('Card').setTextureWithCode(cardsArr[i]);
-                },1000)
+                card.runAction(cc.rotateTo(0.8, 0).easing(cc.easeCubicActionOut()));
+                let cardTemp = card.getComponent('Card');
+                cardTemp.moveCardNoBug(0.8, cc.v2(0 + i * 7, 50));
+                card.runAction(cc.scaleTo(0.8, 2.4).easing(cc.easeCubicActionOut()));
+                card.runAction(cc.sequence(cc.delayTime(0.8), cc.scaleTo(0.2, 0.1, 2.5), cc.scaleTo(0.2, 2.5).easing(cc.easeCubicActionOut()), cc.scaleTo(0.2, 2.4).easing(cc.easeCubicActionOut())));
+                card.runAction(cc.sequence(cc.delayTime(0.8), cc.skewTo(0.2, 0, 15), cc.callFunc(() => { card.skewY = -15 }), cc.skewTo(0.2, 0, 0).easing(cc.easeCubicActionOut())));
+                this.setTimeout(() => {
+                    if (this.node == null || typeof this.node == 'undefined') return;
+                    card.getComponent('Card').setTextureWithCode(cardsArr[i], true, i != 0);
+                    this.codeArr.push(cardsArr[i]);
+                }, 1000)
                 card.zIndex = 1001;
-                this.setTimeout(()=>{
-                    this.handleTouchCardReveal(Hide,this.thisPlayer.vectorCard);
-                },2000)
+                this.setTimeout(() => {
+                    if (this.node == null || typeof this.node == 'undefined') return;
+                    this.handleTouchCardReveal(Hide, this.thisPlayer.vectorCard);
+                }, 2000)
             }
-        },2000);
+        }, 2000);
         this.stateGame = STATE_GAME.PLAYING;
     },
 
@@ -612,13 +624,15 @@ var ShanGameView = cc.Class({
         target.on('touchend', function(event) {
             let distance = Math.sqrt(Math.pow(cards[1].x - originPos.x,2) + Math.pow(cards[1].y - originPos.y,2));
             // let distance = Math.sqrt(Math.pow(cards[1].x - originPos.x,2));
-            if(distance > 30){
+            if(distance > 50){
                 cards[1].getComponent('Card').moveCardNoBug(0.4,cc.v2(60,50));
                 cards[0].getComponent('Card').moveCardNoBug(0.4,cc.v2(-60,50));
+                cards[0].getComponent('Card').showShanCorner(true)
                 this.manageGamePlayButton();
                 target.off('touchmove');
                 target.off('touchend');
                 target.off('touchstart')
+                target.off('touchend')
                 this.swipe_ani.node.active = false;
             }else{
                 this.swipe_ani.node.active = true;
@@ -671,6 +685,8 @@ var ShanGameView = cc.Class({
             card.runAction(cc.scaleTo(0.6,0.6).easing(cc.easeCubicActionOut()));
             card.skewY = 0
             card.zIndex = GAME_ZORDER.Z_CARD + i;
+            let cardTemp = card.getComponent('Card');
+            cardTemp.exitShanCard();
             if(this.thisPlayer.vectorCard.length > 2 && i == 1){
                 card.getComponent('Card').setTextureWithCode(code);
             }
@@ -709,20 +725,25 @@ var ShanGameView = cc.Class({
         }
     },
 
-    handleCardRotationAndOffset (card,index,numbOfCard,playerSlot,isLarge = false){
+    handleCardRotationAndOffset(card, index, numbOfCard, playerSlot, isLarge = false, openCard = false) {
         let angle = 20 * index - 10 * (numbOfCard - 1);
         card.skewY = 0;
-        card.runAction(cc.rotateTo(0.3,angle).easing(cc.easeCubicActionOut()));
+        card.runAction(cc.rotateTo(0.3, angle).easing(cc.easeCubicActionOut()));
         let offsetX = 20 * index - 10 * (numbOfCard - 1);
-        if(isLarge == true){
+        if (isLarge == true) {
             offsetX = 30 * index - 15 * (numbOfCard - 1);
         }
         let offsetY = 0;
-        if(numbOfCard == 3 && index != 1){
+        if (numbOfCard == 3 && index != 1) {
             offsetY = -5;
         }
-        let pos = this.getHandPosition(playerSlot,offsetX,offsetY);
-        card.getComponent('Card').moveCardNoBug(0.3,pos)
+        let pos = this.getHandPosition(playerSlot, offsetX, offsetY);
+        if (openCard == true) {
+            pos = this.getHandPositionOpenCard(playerSlot, offsetX, offsetY);
+        }
+
+        card.getComponent('Card').moveCardNoBug(0.3, pos)
+        card.zIndex = GAME_ZORDER.Z_CARD + index;
         // this.setTimeout(()=>{
         //     card.position = this.getHandPosition(playerSlot,offset);
         // },350)
@@ -744,6 +765,24 @@ var ShanGameView = cc.Class({
                 return cc.v2(500-120+offsetX,25 + offsetY);
             case 6:
                 return cc.v2(450-120+offsetX,-175 + offsetY);
+        }
+    },
+    getHandPositionOpenCard(playerIndex, offsetX, offsetY = 0) {
+        switch (playerIndex) {
+            case 0:
+                return cc.v2(-100 + 120 + offsetX, -175 + offsetY);
+            case 1:
+                return cc.v2(-450 + offsetX, -175 + offsetY);
+            case 2:
+                return cc.v2(-500 - 39 + offsetX, 20 + offsetY + 10);
+            case 3:
+                return cc.v2(-325 + offsetX, 215 + offsetY + 10);
+            case 4:
+                return cc.v2(325 + offsetX, 215 + offsetY + 10);
+            case 5:
+                return cc.v2(500 + 39 + offsetX, 20 + offsetY + 10);
+            case 6:
+                return cc.v2(450 + offsetX, -175 + offsetY);
         }
     },
 
@@ -830,7 +869,7 @@ var ShanGameView = cc.Class({
             // cc.delayTime(delay),
             cc.scaleTo(time/2,0,scale),
             cc.callFunc(()=>{
-                card.getComponent('Card').setTextureWithCode(code)
+                card.getComponent('Card').setTextureWithCode(code, true);
             }),
             cc.scaleTo(time/2,scale).easing(cc.easeCubicActionOut()),
         ));
@@ -888,6 +927,7 @@ var ShanGameView = cc.Class({
             for(let i = 0; i < this.thisPlayer.vectorCard.length; i++){
                 let card = this.thisPlayer.vectorCard[i];
                 card.runAction(cc.rotateTo(0.4,0).easing(cc.easeCubicActionOut()));
+                card.getComponent('Card').showShanCard();
                 if(i != 1){
                     card.runAction(cc.scaleTo(0.4,2.4).easing(cc.easeCubicActionOut()));
                 }
@@ -916,6 +956,7 @@ var ShanGameView = cc.Class({
         target.off('touchmove');
         target.off('touchend');
         target.off('touchstart');
+        target.off('touchcancel');
         
         this.swipe_ani.node.active = true;
         this.swipe_ani.node.zIndex = 1010;
@@ -930,8 +971,8 @@ var ShanGameView = cc.Class({
 
         target.on('touchmove', function(event) {
             let delta = event.touch.getDelta();
-            cards[2].x += delta.x/2;
-            cards[2].y += delta.y/2;
+            cards[2].x += delta.x;
+            cards[2].y += delta.y;
             // cards[0].x -= delta.x;
             // cards[0].y -= delta.y;
         });
@@ -942,6 +983,7 @@ var ShanGameView = cc.Class({
             if(distance > 30){
                 cards[2].getComponent('Card').moveCardNoBug(0.4,cc.v2(120,50));
                 cards[1].getComponent('Card').moveCardNoBug(0.4,cc.v2(0,50));
+                cards[1].getComponent('Card').showShanCorner(true);
                 cards[0].getComponent('Card').moveCardNoBug(0.4,cc.v2(-120,50));
                 
                 target.off('touchmove');
@@ -1462,10 +1504,12 @@ var ShanGameView = cc.Class({
                 this.sortActivePlayer();
             }
         }
-        let delay = 100 * this.activePlayer.length;
-        this.fakeDealingEffect();
-        this.setTimeout(()=>{
-            this.fakeDealingEffect();
+        let plNumb = this.activePlayer.length
+        let delay = 100 * plNumb;
+        this.fakeDealingEffect(plNumb);
+        this.setTimeout(() => {
+            if (this.node == null || typeof this.node == 'undefined') return;
+            this.fakeDealingEffect(plNumb);
             // require('SoundManager1').instance.dynamicallyPlayMusic(ResDefine.sound_chiabai);
         },delay + 100)
         // require('SoundManager1').instance.dynamicallyPlayMusic(ResDefine.sound_chiabai);

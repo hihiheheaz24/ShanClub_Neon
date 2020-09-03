@@ -2146,7 +2146,7 @@
     "_useOriginalSize": false,
     "_actualFontSize": 40,
     "_fontSize": 20,
-    "_lineHeight": 23,
+    "_lineHeight": 30,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -2343,10 +2343,12 @@
     "_useOriginalSize": false,
     "_actualFontSize": 20,
     "_fontSize": 20,
-    "_lineHeight": 23,
+    "_lineHeight": 30,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c33c7ebc-fad8-4c8f-9179-6318c2df6a35"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "dangdinhs...:",
     "_N$horizontalAlign": 0,
@@ -2664,16 +2666,18 @@
     "_useOriginalSize": false,
     "_actualFontSize": 40,
     "_fontSize": 20,
-    "_lineHeight": 25,
+    "_lineHeight": 30,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c33c7ebc-fad8-4c8f-9179-6318c2df6a35"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "Monica: You win 100000000 with cards:",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 3
+    "_N$overflow": 0
   },
   {
     "__type__": "cc.LabelOutline",
@@ -5193,7 +5197,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "adc77b92-4a70-4a31-9841-8c57770d91df"
+      "__uuid__": "96f2f11a-2afb-4472-b2b1-c8759e71c88e"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -5835,7 +5839,10 @@
     "dealer_dialog": {
       "__id__": 182
     },
-    "isBanker": false
+    "isBanker": false,
+    "node_chat": {
+      "__id__": 49
+    }
   },
   {
     "__type__": "cc.PrefabInfo",

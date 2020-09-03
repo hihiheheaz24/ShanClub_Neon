@@ -47,6 +47,7 @@ var ItemChatNgoaiGame = cc.Class({
         cc.NGWlog('STR', str);
         this.lb_chat_text.node.active = true;
         this.lb_chat_text.string = str;
+        this.lb_chat_text.font = require('UIManager').instance.font_zawi;
     },
 
     setDataChatItem(str, id, spAvartar = null) {
@@ -54,6 +55,7 @@ var ItemChatNgoaiGame = cc.Class({
         this.bg_chat.active = true;
         this.ic_chat_item.node.active = true;
         this.lb_chat_item.string = str;
+        this.lb_chat_item.font = require('UIManager').instance.font_zawi;
         this.ic_chat_item.skeletonData = Global.QuickChatCasino.listEmoAni[id - 1];
         this.ic_chat_item.animation = 'animation';
         this.ic_chat_item.premultipliedAlpha = false;
@@ -62,6 +64,7 @@ var ItemChatNgoaiGame = cc.Class({
         this.unuse();
         this.bg_card.active = true;
         this.lb_chat_card.string = str;
+        this.lb_chat_card.font = require('UIManager').instance.font_zawi;
         if (this.list_card.length > data.length) {
             this.list_card[2].node.active = false;
         }

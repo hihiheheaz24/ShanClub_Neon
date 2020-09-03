@@ -678,6 +678,7 @@ var GameView2 = cc.Class({
             cc.NGWlog('m set info la=====' + m)
             this.lbInfo.string = cc.js.formatStr('%s %d\n%s: %s', GameManager.getInstance().getTextConfig('txt_id'), id, GameManager.getInstance().getTextConfig('txt_bet'), GameManager.getInstance().formatNumber(m));
         }
+        this.lbInfo.font = require('UIManager').instance.font_zawi;
 
         GameManager.getInstance().table_mark = m;
         GameManager.getInstance().tableId = id;

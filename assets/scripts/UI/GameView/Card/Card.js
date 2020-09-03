@@ -7,6 +7,10 @@ cc.Class({
             default: null,
             type: cc.Sprite
         },
+        imgShan: {
+            default: null,
+            type: cc.Node,
+        },
         imgValue: {
             default: null,
             type: cc.Sprite
@@ -65,7 +69,7 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
+    onLoad() {
         this.moveAction = null;
     },
 
@@ -75,7 +79,7 @@ cc.Class({
 
     // update (dt) {},
 
-    setTextureWithCode(cod) {
+    setTextureWithCode(cod, isShan = false, isShowCorner = false) {
         this.code = cod;
         if (this.code === CODE_JOKER_RED || this.code === CODE_JOKER_BLACK) {
             this.decodeCard(this.code);
@@ -156,6 +160,26 @@ cc.Class({
             this.imgSuitSmall.node.setScale(1.0);
             this.imgSuitLarge.node.setScale(1.0);
         }
+        if (isShan == true) {
+            this.showShanCard()
+            this.showShanCorner(isShowCorner)
+        } else {
+            this.imgShan.active = false;
+        }
+    },
+
+    showShanCard() {
+        let suitName = this.getSuitInVN();
+        this.imgShan.active = true;
+        this.imgShan.getComponent('CardShan').setInfo(this.S, this.N, suitName, this.imgSuitSmall.spriteFrame, this.imgValue.spriteFrame)
+    },
+
+    showShanCorner(isShow) {
+        this.imgShan.getComponent('CardShan').showCorner(isShow)
+    },
+
+    exitShanCard() {
+        this.imgShan.active = false;
     },
 
     setDark(isDark, _spriteFrame = null) {
@@ -171,8 +195,8 @@ cc.Class({
     },
 
     setBorder(isBorder) {
-        if (require("GameManager").getInstance().curGameId == GAME_ID.SHAN_PLUS 
-        || require("GameManager").getInstance().curGameId == GAME_ID.SHANKOEMEE ) {
+        if (require("GameManager").getInstance().curGameId == GAME_ID.SHAN_PLUS
+            || require("GameManager").getInstance().curGameId == GAME_ID.SHANKOEMEE) {
             this.borderCard.spriteFrame = this.card_border_green;
         }
         this.borderCard.node.active = isBorder;
@@ -240,10 +264,10 @@ cc.Class({
     },
 
     getSuitInVN() {
-        if (require('GameManager').getInstance().curGameId === GAME_ID.BOOGYI 
-        || require('GameManager').getInstance().curGameId === GAME_ID.BOHN 
-        || require('GameManager').getInstance().curGameId === GAME_ID.SHAN_PLUS
-        || require('GameManager').getInstance().curGameId === GAME_ID.SHANKOEMEE) {
+        if (require('GameManager').getInstance().curGameId === GAME_ID.BOOGYI
+            || require('GameManager').getInstance().curGameId === GAME_ID.BOHN
+            || require('GameManager').getInstance().curGameId === GAME_ID.SHAN_PLUS
+            || require('GameManager').getInstance().curGameId === GAME_ID.SHANKOEMEE) {
             switch (this.S) {
                 case 1:
                     return 'tep';
@@ -357,11 +381,11 @@ cc.Class({
         return this.isFire;
     },
 
-    moveCardNoBug (time,pos){
-        if(this.moveAction != null){
+    moveCardNoBug(time, pos) {
+        if (this.moveAction != null) {
             this.node.stopAction(this.moveAction);
         }
-        this.moveAction = cc.moveTo(time,pos).easing(cc.easeCubicActionOut());
+        this.moveAction = cc.moveTo(time, pos).easing(cc.easeCubicActionOut());
         this.node.runAction(this.moveAction);
     },
 });

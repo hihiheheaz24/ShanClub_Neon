@@ -2466,8 +2466,10 @@
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c33c7ebc-fad8-4c8f-9179-6318c2df6a35"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "",
     "_N$horizontalAlign": 1,
@@ -2642,6 +2644,9 @@
       "__uuid__": "0191f456-5b6f-4a51-b853-986263a5afd5"
     },
     "btn_normal": null,
+    "font_zawi": {
+      "__uuid__": "c33c7ebc-fad8-4c8f-9179-6318c2df6a35"
+    },
     "time_enter_background": 0,
     "fontAdd": {
       "__uuid__": "6975891e-3670-4c9b-a00d-a678138b829e"
