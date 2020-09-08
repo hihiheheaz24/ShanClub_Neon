@@ -413,13 +413,13 @@ var ShanGameView = cc.Class({
             case 1:
                 return cc.v2(-240,-75);
             case 2:
-                return cc.v2(-260,0);
+                return cc.v2(-300,0);
             case 3:
                 return cc.v2(-225,75);
             case 4:
                 return cc.v2(225,75);
             case 5:
-                return cc.v2(260,0);
+                return cc.v2(300,0);
             case 6:
                 return cc.v2(240,-75);
         }
@@ -756,13 +756,13 @@ var ShanGameView = cc.Class({
             case 1:
                 return cc.v2(-450+120+offsetX,-175 + offsetY);
             case 2:
-                return cc.v2(-500+120+offsetX,25 + offsetY);
+                return cc.v2(-500+80+offsetX,25 + offsetY);
             case 3:
                 return cc.v2(-325+120+offsetX,200 + offsetY);
             case 4:
                 return cc.v2(325-120+offsetX,200 + offsetY);
             case 5:
-                return cc.v2(500-120+offsetX,25 + offsetY);
+                return cc.v2(500-80+offsetX,25 + offsetY);
             case 6:
                 return cc.v2(450-120+offsetX,-175 + offsetY);
         }

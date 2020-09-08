@@ -87,7 +87,7 @@ cc.Class({
         this.bkg_Left.active = false;
         this.bkg_Right.active = true;
 
-        let name = ": " + data.name_player;
+        let name = data.name_player + ": ";
         if (name.length > 12) {
             name = name.substring(0, 10) + "...";
         }

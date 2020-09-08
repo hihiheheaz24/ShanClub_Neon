@@ -940,15 +940,21 @@ var BauCuaView = cc.Class({
             this.countTime = Math.floor(time - this.TIMEACTION.STARTANI - this.TIMEACTION.STARTSHAKE);
             act = cc.sequence(funcStart, delStart, funcShake, delShake);
             timeDelayBet += this.TIMEACTION.STARTANI + this.TIMEACTION.STARTSHAKE
+            cc.NGWlog("!> check 1",this.countTime,timeDelayBet)
         } else if (time >= this.TIMEACTION.TIMEONBET + this.TIMEACTION.STARTSHAKE) {
             this.countTime = Math.floor(time - this.TIMEACTION.STARTSHAKE);
             act = cc.sequence(funcShake, delShake);
             timeDelayBet += this.TIMEACTION.STARTSHAKE
+            cc.NGWlog("!> check 2",this.countTime,timeDelayBet)
         } else if (time >= this.TIMEACTION.TIMEONBET + this.TIMEACTION.STARTBET) {
             ///this.countTime = Math.floor(time - this.TIMEACTION.STARTBET);
-            this.countTime = 15;
+            this.countTime = time - 1;
             act = cc.sequence(funcBet, delBet);
             timeDelayBet += this.TIMEACTION.STARTBET
+            cc.NGWlog("!> check 3",this.countTime,timeDelayBet)
+        }else{
+            this.countTime = time - 1;
+            cc.NGWlog("!> check 4",this.countTime,timeDelayBet)
         }
         if (act !== null) {
             this.aniNode.runAction(act);

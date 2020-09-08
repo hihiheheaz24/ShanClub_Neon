@@ -101,6 +101,7 @@ cc.Class({
     showResultAni (isWin){
         let pos = this.node.position;
         let aniposx;
+        cc.log('dmdmdmdm xem pos  : ', pos);
         if(pos.x > 120){
             aniposx = 120;
         }else{
@@ -109,7 +110,7 @@ cc.Class({
         if(isWin == 1){
             this.anim_win.node.active = true;
             this.anim_win.node.x = aniposx;
-            this.anim_win.node.y = 20;
+            this.anim_win.node.y = 60;
             this.anim_win.setAnimation(0, "animation", true);
             setTimeout(() => {
                 if(this.node != null){
@@ -119,7 +120,7 @@ cc.Class({
         }else{
             this.anim_lose.node.active = true;
             this.anim_lose.node.x = aniposx;
-            this.anim_lose.node.y = 20;
+            this.anim_lose.node.y = 60;
             this.anim_lose.setAnimation(0, "animation", true);
             setTimeout(() => {
                 if(this.node != null){
@@ -132,7 +133,7 @@ cc.Class({
 
             this.lose_img.node.active = true;
             this.lose_img.node.x = aniposx;
-            this.lose_img.node.y = 20;
+            this.lose_img.node.y = 60;
             this.lose_img.node.runAction(cc.sequence(
                 cc.scaleTo(0.1,1.8),
                 cc.scaleTo(0.4,1).easing(cc.easeCubicActionOut()),

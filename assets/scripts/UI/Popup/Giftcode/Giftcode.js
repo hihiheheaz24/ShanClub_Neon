@@ -19,6 +19,7 @@ var Giftcode = cc.Class({
         // cc.NGWlog('-------------------------------------------------> CODE:  ' + giftcode);
         if (giftcode === '') return;
         require('NetworkManager').getInstance().sendGiftCode(giftcode);
+        this.giftcodeEditBox.string = '';
         
     },
 

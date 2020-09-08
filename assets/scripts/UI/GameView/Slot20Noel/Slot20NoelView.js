@@ -350,7 +350,7 @@ var Slot20NoelView = cc.Class({
                 this.showAnimBkgFreeSpin();
             else {
                 if (typeof this.finishData != 'undefined')
-                    this.lbFreeAnim.string = this.finishData.freeSpinLeft - 1 + " Free Spin Left";
+                    this.lbFreeAnim.string = this.finishData.freeSpinLeft + " Free Spin Left";
             }
         }
         this.clickSpinCount++;

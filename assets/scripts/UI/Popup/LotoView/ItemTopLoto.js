@@ -69,8 +69,8 @@ cc.Class({
         this.lb_agwon.string = require('GameManager').getInstance().formatMoneyAg(data.AG);
         //set name
         let name = data.N
-        if (name.length > 9) {
-            name = name.substring(0, 9) + "...";
+        if (name.length > 8) {
+            name = name.substring(0, 8) + "...";
         }
         this.lb_name.string = name;
     },

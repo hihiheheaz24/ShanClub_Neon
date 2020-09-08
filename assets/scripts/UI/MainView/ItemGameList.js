@@ -168,7 +168,7 @@ cc.Class({
       this.isInitAssets = false;
     }
 
-    //  this.ForcedUpdate = false; //hien cmt;
+     this.ForcedUpdate = false; //hien cmt;
     if (!this.ForcedUpdate) {
       cc.NGWlog('------------ onClickChooseGame');
       if (require("GameManager").getInstance().user.ag <= 0) {

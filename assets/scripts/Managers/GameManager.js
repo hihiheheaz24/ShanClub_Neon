@@ -266,7 +266,7 @@ var GameManager = cc.Class({
     isVerifyMobile: false,
     is_bl_fb: false,
     is_mission: false,
-    is_bl_salert: false,
+    is_bl_salert: true,
     isBn: false,
     allowPushOffline: false,
     isLoginSucces: false,
@@ -808,12 +808,14 @@ var GameManager = cc.Class({
   },
 
   formatMoney(money) {
-    // char k[] = { 'K', '\0'};
+     // char k[] = { 'K', '\0'};
     // char m[] = { 'M', '\0'};
     // char b[] = { 'B', '\0'};
     // char u[] = { '\0'};
+    let isNeg = money < 0 ? true : false;
     let format = "";
     let mo = Math.abs(money);
+    money = Math.abs(money);
     //int cha;
     if (mo >= 1000000000) {
       mo /= 1000000000;
@@ -822,7 +824,7 @@ var GameManager = cc.Class({
       mo /= 1000000;
       format = "M"; // vidu money bang 20,000,000
     } else {
-      return this.formatNumber(money);
+      return (isNeg == true ? "-" : "") + this.formatNumber(money);
     }
 
     let str = money.toString() + "0"; // str length se la 200000000
@@ -837,8 +839,8 @@ var GameManager = cc.Class({
 
     }
 
-    return (money < 0 ? "-" : "") + Math.floor(mo) +((str.toString()[idex] === '0' && str.toString()[idex + 1] === '0') ? "" : "," )+ ((str.toString()[idex] === '0' && str.toString()[idex + 1] === '0') ? "" : str.toString()[idex] )
-    + (str.toString()[idex + 1] === '0' ? "" : str.toString()[idex + 1]) + format;
+    return (isNeg == true ? "-" : "") + Math.floor(mo) + ((str.toString()[idex] === '0' && str.toString()[idex + 1] === '0') ? "" : ",") + ((str.toString()[idex] === '0' && str.toString()[idex + 1] === '0') ? "" : str.toString()[idex])
+      + (str.toString()[idex + 1] === '0' ? "" : str.toString()[idex + 1]) + format;
   },
   formatMoneyAg(money) {
     // char k[] = { 'K', '\0'};
@@ -1091,6 +1093,9 @@ var GameManager = cc.Class({
 
         case CURRENT_VIEW.LOBBY:
           sceneName = "LOBBYVIEW";
+          break;
+        case CURRENT_VIEW.LOTOVIEW:
+          sceneName = "LOTOVIEW";
           break;
 
         case CURRENT_VIEW.PAYMENT:

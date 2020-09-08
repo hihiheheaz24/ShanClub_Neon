@@ -51,7 +51,6 @@ cc.Class({
     btn_cashOut: cc.Button,
     btn_sendGift: cc.Button,
     btn_safe : cc.Button,
-    btn_mission : cc.Button,
     btn_giftCode: cc.Button,
     btn_messageFb: cc.Button,
     btn_newsBanner: cc.Node,
@@ -168,7 +167,6 @@ cc.Class({
       this.btn_cashOut.node.active = true;
     }
     else this.btn_cashOut.node.active = false;
-    this.btn_mission.node.active = require("GameManager").getInstance().is_mission;
     //this.btn_messageFb.node.active = require('GameManager').getInstance().is_bl_fb;
 
     let myVip = require("GameManager").getInstance().user.vip;
@@ -241,7 +239,6 @@ cc.Class({
       this.btn_cashOut.node.active = true;
     }
     else this.btn_cashOut.node.active = false;
-    this.btn_mission.node.active = require("GameManager").getInstance().is_mission;
     //this.btn_messageFb.node.active = require('GameManager').getInstance().is_bl_fb;
     let myVip = require("GameManager").getInstance().user.vip;
     let vChanpho = require("GameManager").getInstance().vchanpho;

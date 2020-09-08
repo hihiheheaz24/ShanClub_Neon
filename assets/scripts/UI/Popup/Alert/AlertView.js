@@ -65,8 +65,14 @@ var AlertView = cc.Class({
         || require('GameManager').getInstance().getCurrentSceneName() === "LOBBYVIEW") {
             this.bg.node.position = cc.v2(cc.winSize.width / 2 - this.node.getContentSize().width / 2 + 80, cc.winSize.height / 2 * 0.65);
         } else {
-            let pos = cc.v2(cc.winSize.width / 10, cc.winSize.height / 2.23);
-            this.bg.node.position = pos;
+            if(require('GameManager').getInstance().getCurrentSceneName() === "LOTOVIEW"){
+                let pos = cc.v2(cc.winSize.width * 0.5 - this.node.getChildByName("bg").getChildByName("bg_text").getContentSize().width/2 + 60, cc.winSize.height * 0.3 + 5);
+                this.bg.node.position = pos;
+            }
+            else{
+                let pos = cc.v2(cc.winSize.width / 10, cc.winSize.height / 2.23);
+                this.bg.node.position = pos;
+            }
         }
         //this.bg.node.position = cc.v2(cc.winSize.width / 2 - this.node.getContentSize().width / 2, cc.winSize.height / 2 * 0.65);
         if (require("GameManager").getInstance().gameView !== null) {

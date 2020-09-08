@@ -116,11 +116,14 @@ cc.Class({
         this.pre_help.active = false;
         this.lb_ag.string = require('GameManager').getInstance().
         formatNumber(require('GameManager').getInstance().user.ag);
+        require("GameManager").getInstance().setCurView(CURRENT_VIEW.LOTOVIEW);
+        require('UIManager').instance.alertView.setPosAlert();
     },
 
     onBack(){
         require('SoundManager1').instance.playButton();
         require('UIManager').instance.onHideView(this.node, true);
+        require("GameManager").getInstance().setCurView(CURRENT_VIEW.GAMELIST_VIEW);
     },
     loadListTopLoto(dataa){
        let data = JSON.parse(dataa);

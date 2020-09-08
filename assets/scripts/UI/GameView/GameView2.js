@@ -36,10 +36,6 @@ var GameView2 = cc.Class({
             visible: false
         },
         itemChatNgoaiGame: require('ItemChatNgoaiGame'),
-        btnScrenShot: {
-            default: null,
-            type: cc.Button
-        },
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -62,16 +58,7 @@ var GameView2 = cc.Class({
         this.cardPool = new cc.NodePool('Card');
         this.node.setContentSize(cc.winSize);
 
-        if (!require("GameManager").getInstance().is_bl_fb) {
-            if (this.btnScrenShot !== null) {
-                this.btnScrenShot.node.active = false;
-            }
-        }
-
         if (cc.sys.isBrowser) {
-            if (this.btnScrenShot !== null) {
-                this.btnScrenShot.node.active = false;
-            }
             if (require("GameManager").getInstance().curGameId == GAME_ID.TIENLEN) {
                 this.lbInfo.getComponent(cc.Widget).left = 140;
             }
@@ -642,20 +629,20 @@ var GameView2 = cc.Class({
 
     },
     onClickShareFb() {
-        require('SoundManager1').instance.playButton();
-        require('SMLSocketIO').getInstance().emitSIOCCC(cc.js.formatStr("ClickShareScreenShot_%s", require('GameManager').getInstance().getCurrentSceneName()));
-        cc.NGWlog('On click Share Facebook');
+        // require('SoundManager1').instance.playButton();
+        // require('SMLSocketIO').getInstance().emitSIOCCC(cc.js.formatStr("ClickShareScreenShot_%s", require('GameManager').getInstance().getCurrentSceneName()));
+        // cc.NGWlog('On click Share Facebook');
 
-        if (this.btnScrenShot !== null) this.btnScrenShot.interactable = false;
+        // if (this.btnScrenShot !== null) this.btnScrenShot.interactable = false;
 
-        setTimeout(() => {
-            if (this.node == null || typeof this.node == 'undefined') return;
-            if (this.btnScrenShot !== null) this.btnScrenShot.interactable = true;
-        }, 5000)
+        // setTimeout(() => {
+        //     if (this.node == null || typeof this.node == 'undefined') return;
+        //     if (this.btnScrenShot !== null) this.btnScrenShot.interactable = true;
+        // }, 5000)
 
-        if (cc.sys.isNative) {
-            require('UIManager').instance.onTakeScreenShot();
-        }
+        // if (cc.sys.isNative) {
+        //     require('UIManager').instance.onTakeScreenShot();
+        // }
 
     },
     startGameAndSendTracking() {

@@ -464,6 +464,11 @@ cc.Class({
                 if (i < lengt - 1 && agPLayer < arrListRoom[i + 1].chip_require) {
                     isBest = true;
                 }
+                else{
+                    if(i==lengt-1){
+                        isBest = true;
+                    }
+                }
             }
 
             if (this.cur_tab === 0) {

@@ -71,6 +71,7 @@ var ChipbetBaccarat = cc.Class({
             for (let i = 0; i < size; i++) {
                 let data = this.listDataChip[i];
                 for (let j = 0; j < data.num; j++) {
+                    if(this.chipCount > 14) break;
                     // let spr = this.sprListChip.getSpriteFrame(require("GameManager").getInstance().formatMoneyChip(data.value));
                     // this.listChip[this.chipCount].spriteFrame = spr;
                     let spr = null;
@@ -84,6 +85,7 @@ var ChipbetBaccarat = cc.Class({
                     if (spr == null) {
                         spr = this.listSprChip[5];
                     }
+                    cc.log('chip count la : ', this.chipCount);
                     this.createLabelChip(this.listChip[this.chipCount].node, data.value);
                     this.listChip[this.chipCount].spriteFrame = spr;
 
@@ -140,6 +142,14 @@ var ChipbetBaccarat = cc.Class({
             if (this.listValue[i] > value) {
                 NearVal = this.listValue[i - 1];
                 break;
+            }
+        }
+         if(NearVal == 0){
+            for(let i = this.listValue.length - 1; i >= 0; i++){
+                if(value >= this.listValue[i]){
+                    NearVal = this.listValue[i];                
+                    break;
+                }
             }
         }
         soNguyen = Math.floor(value / NearVal);

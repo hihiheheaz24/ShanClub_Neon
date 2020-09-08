@@ -11834,8 +11834,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 67,
-      "height": 20
+      "width": 133,
+      "height": 30
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -11862,9 +11862,9 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 10,
-    "_fontSize": 10,
-    "_lineHeight": 20,
+    "_actualFontSize": 20,
+    "_fontSize": 20,
+    "_lineHeight": 30,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
