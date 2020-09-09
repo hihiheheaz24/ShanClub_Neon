@@ -1112,8 +1112,6 @@ var LoadingGame = cc.Class({
     var doc = JSON.parse(result);
     GameManager.getInstance().listAgDT = doc.dt_list;
     GameManager.getInstance().listAgency = doc.dt_info;
-    //  require('UIManager').instance.instantiate_parent.addChild(Global.CashOutView.node);
-    //  Global.CashOutView.node.removeFromParent();
   },
 
   // update (dt) {},

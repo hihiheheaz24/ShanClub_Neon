@@ -127,6 +127,7 @@ var ShanGameView = cc.Class({
         this.hideBg = null;
         this.is_show_border_dealer = false;
         this.isChangeCardToNormal = false;
+        this.codeArr = [];
         
     },
 
@@ -135,6 +136,7 @@ var ShanGameView = cc.Class({
         cc.NGWlog("!> handleCTable",strData);
         this.currentBankerName = '';
         this.activePlayer = [...this.players];
+        this.codeArr = [];
     },
     
     handleCCTable (strData){
@@ -143,6 +145,7 @@ var ShanGameView = cc.Class({
     },
 
     handleVTable (strData){
+        this.codeArr = [];
         require('SoundManager1').instance.dynamicallyPlayMusic(ResDefine.join_PLayer);
         this._super(strData);
         var data = JSON.parse(strData);
@@ -179,6 +182,7 @@ var ShanGameView = cc.Class({
     },
 
     handleRJTable (strData){
+        this.codeArr = [];
         this._super(strData);
         cc.NGWlog("!> handleRJTable",strData);
         this.destroyBets();
@@ -199,6 +203,7 @@ var ShanGameView = cc.Class({
     },
 
     handleSTable (strData){
+        this.codeArr = [];
         this._super(strData);
         require('SoundManager1').instance.dynamicallyPlayMusic(ResDefine.join_PLayer);
         cc.NGWlog("!> handleSTable",strData);
@@ -215,6 +220,7 @@ var ShanGameView = cc.Class({
     },
 
     viewExistingCard (data){
+        this.codeArr = [];
         for(let i = 0 ; i < data.length; i++){
             let index = this.getPlayerIndex(data[i].N);
             let player = this.getPlayer(data[i].N);
@@ -226,6 +232,7 @@ var ShanGameView = cc.Class({
                 player.vectorCard.push(cardTemp.node);
                 if(player == this.thisPlayer){
                     cardTemp.node.setScale(0.6, 0.6);
+                    this.codeArr.push(data[i].Arr[j])
                 }else{
                     if(data[i].Arr[j] != 0){
                         cardTemp.node.setScale(0.55, 0.55);
@@ -522,6 +529,7 @@ var ShanGameView = cc.Class({
     handleTimeToStart (data){
         this.destroyBets();
         this.destroyCards();
+        this.codeArr = [];
         for(let i = 0; i < 7; i++){
             let limit = this.playerPoints[i].length;
             for(let j = 0; j < limit; j++){
@@ -674,29 +682,44 @@ var ShanGameView = cc.Class({
 
     changeCardBackToNomal (code){
         this.swipe_ani.node.active = false;
-        if(this.isBanker == false){
+        if (this.isBanker == false) {
             this.isChangeCardToNormal = true;
         }
-        if(code == null){
+        if (code == null) {
             code = this.backUpCode;
         }
-        for(let i = 0; i < this.thisPlayer.vectorCard.length; i++){
+        for (let i = 0; i < this.thisPlayer.vectorCard.length; i++) {
+            let index = i;
             let card = this.thisPlayer.vectorCard[i];
-            card.runAction(cc.scaleTo(0.6,0.6).easing(cc.easeCubicActionOut()));
+            card.runAction(cc.scaleTo(0.6, 0.6).easing(cc.easeCubicActionOut()));
             card.skewY = 0
             card.zIndex = GAME_ZORDER.Z_CARD + i;
             let cardTemp = card.getComponent('Card');
             cardTemp.exitShanCard();
-            if(this.thisPlayer.vectorCard.length > 2 && i == 1){
-                card.getComponent('Card').setTextureWithCode(code);
+            if (this.thisPlayer.vectorCard.length > 2 && i == 1) {
+                cardTemp.setTextureWithCode(code);
             }
-            this.setTimeout(()=>{
-                this.handleCardRotationAndOffset(card,i,this.thisPlayer.vectorCard.length,0,true);
-            },0.5)
-        }this.setTimeout(()=>{
-            this.showPlayerPoint(this.thisPlayer.vectorCard.length,0,this.currentPoint,this.currentRate);
-            this.swipe_ani.node.active = false;    
-        },400)
+            index = this.getCodeIndex(cardTemp, i)
+            this.setTimeout(() => {
+                if (this.node == null || typeof this.node == 'undefined') return;
+                this.handleCardRotationAndOffset(card, index, this.thisPlayer.vectorCard.length, 0, true);
+            }, 0.5)
+        } this.setTimeout(() => {
+            if (this.node == null || typeof this.node == 'undefined') return;
+            this.showPlayerPoint(this.thisPlayer.vectorCard.length, 0, this.currentPoint, this.currentRate, this.thisPlayer._playerView);
+            this.swipe_ani.node.active = false;
+        }, 400)
+    },
+    
+    getCodeIndex(cardTemp, backupId) {
+        if (this.codeArr.length > 3) {
+            return backupId
+        }
+        for (let j = 0; j < this.codeArr.length; j++) {
+            if (this.codeArr[j] == cardTemp.code) {
+                return j
+            }
+        }
     },
 
     findPlayer (value,array){
@@ -820,6 +843,7 @@ var ShanGameView = cc.Class({
             if(player._indexDynamic == 0){
                 this.backUpCode = data.C;
                 this.dealing3rdCardForYou(data.C);
+                this.codeArr.push(data.C)
                 this.currentPoint = data.score;
                 this.currentRate = data.rate;
                 let countDown = this.node.getChildByName('DrawCountDown');
@@ -1123,7 +1147,7 @@ var ShanGameView = cc.Class({
         }
         this.activePlayer = [...this.players];
         this.sortActivePlayer();
-        
+        this.codeArr = [];
     },
 
     handleCbc (data){

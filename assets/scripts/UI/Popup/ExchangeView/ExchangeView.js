@@ -16,10 +16,6 @@ cc.Class({
             default: null,
             type: cc.Sprite,
         },
-        nodeCard : {
-            default : null,
-            type : cc.Node
-        },
         listSpriteFrameNet : {
             default : [],
             type : [cc.Node]
@@ -32,7 +28,7 @@ cc.Class({
         },
         prefabItemCard: {
             default: null,
-            type: cc.Node
+            type: cc.Prefab
         },
         //agency
         prefabItemAgentcy: {
@@ -41,7 +37,7 @@ cc.Class({
         },
         prefabItemHistory: {
             default: null,
-            type: cc.Node
+            type: cc.Prefab
         },
         prefabInputWave: {
             default: null,
@@ -60,7 +56,8 @@ cc.Class({
     },
 
     start() {
-
+        this.listViewContent.node.stopAllActions();
+        this.listViewContent.content.destroyAllChildren();
         this.icCard.node.active = true;
         this.icWave.node.active = false;
         this.icMerchant.node.active = false;
@@ -75,6 +72,8 @@ cc.Class({
         this.btnNodeWave.active = false;
         this.btnNodeMerchant.active = false;
         this.btnNodeHistory.active = false;
+        this.dataHis = null;
+        this.isSendGetDataHis = false;
     },
     onClose(){
         require('UIManager').instance.onHideView(this.node, true);
@@ -125,6 +124,7 @@ cc.Class({
         this.reloadListRight(index);
     },
     reloadListRight(type){
+        cc.log('reload list rihgt')
         // if(GameManager.getInstance().listAgDT == []) {
         //     require('UIManager').instance.onShowLoad();
         //     setTimeout(()=>{
@@ -132,11 +132,8 @@ cc.Class({
         //     }, 500);
         // }
         //require('UIManager').instance.onHideLoad();
-        for (let i = 0; i < this.listViewContent.content.length; i++) {
-            this.listViewContent.content[i].destroy();
-        }
-        this.listViewContent.content.removeAllChildren();
-        
+        this.listViewContent.node.stopAllActions();
+        this.listViewContent.content.destroyAllChildren();
         let listNet = ["MPT", "Telenor", "Ooredoo", "Mytel","Wavemoney"];
         for(let i = 0 ; i < GameManager.getInstance().listAgDT.length ; i++){
             for(let j = 0 ; j < GameManager.getInstance().listAgDT[i].prov.length ; j ++){
@@ -145,15 +142,19 @@ cc.Class({
                     continue;
                     let item = cc.instantiate(this.prefabItemCard).getComponent("itemExchange");
                     item.node.active = true;
+                    item.node.x = 0;
                     cc.NGWlog("===================> la " + type);
                     item.init(listNet[j],GameManager.getInstance().listAgDT[i].m,GameManager.getInstance().listAgDT[i].ag, type);
 
                     this.listViewContent.content.addChild(item.node);
 
             }
+
         }
     },
     reloadListMerchant(){
+        this.listViewContent.node.stopAllActions();
+        this.listViewContent.content.destroyAllChildren();
         for (let i = 0; i < this.listViewContent.content.length; i++) {
             this.listViewContent.content[i].destroy();
         }
@@ -188,30 +189,34 @@ cc.Class({
     onClickHistory(){
         require('SMLSocketIO').getInstance().emitSIOCCC(cc.js.formatStr("ClickHistory_%s", require('GameManager').getInstance().getCurrentSceneName()));
         require('NetworkManager').getInstance().sendDTHistory(require('GameManager').getInstance().user.id);
+        // if(!this.isSendGetDataHis) return;
         this.btnNodeCard.active = false;
         this.btnNodeWave.active = false;
         this.btnNodeMerchant.active = false;
         this.btnNodeHistory.active = true;
         
-        require('UIManager').instance.onShowLoad();
+        // require('UIManager').instance.onShowLoad();
         this.icCard.node.active = false;
         this.icWave.node.active = false;
         this.icMerchant.node.active = false;
-        
+        this.listViewContent.node.stopAllActions();
+        this.listViewContent.content.destroyAllChildren();
+        this.reloadListHistory();
     },
-    reloadListHistory(listItem){
+    reloadListHistory(){
+        if(this.dataHis == null) return;
+        // this.dataHis = listItem;
+        this.listViewContent.node.stopAllActions();
+        this.listViewContent.content.destroyAllChildren();
         require('UIManager').instance.onHideLoad();
-
-        for (let i = 0; i < this.listViewContent.content.length; i++) {
-            this.listViewContent.content[i].destroy();
-        }
-        this.listViewContent.content.removeAllChildren();
-
-        for (let i = 0; i < listItem.length; i++) {
-            let obj = cc.instantiate(this.prefabItemHistory).getComponent('itemHistoryExchange');
-            obj.node.active = true;
-            obj.updateItem(listItem[i]);
-            this.listViewContent.content.addChild(obj.node);
+        for (let i = 0; i < this.dataHis.length; i++) {
+            this.listViewContent.node.runAction(cc.sequence(cc.delayTime(0.05*i),cc.callFunc(()=>{
+                let obj = cc.instantiate(this.prefabItemHistory).getComponent('itemHistoryExchange');
+                obj.node.active = true;
+                obj.node.x = 0;
+                obj.updateItem(this.dataHis[i]);
+                this.listViewContent.content.addChild(obj.node);
+            })))
         }
     },
     cashOutReturn(data) {
@@ -226,6 +231,6 @@ cc.Class({
     },
     onCloseInputWaveId(){
         //this.prefabInputWave.active = false;
-    }
+    },
 
 });

@@ -220,6 +220,7 @@ cc.Class({
         require('SMLSocketIO').getInstance().emitSIOCCC(cc.js.formatStr("ClickShowProfileFamous_%s", require('GameManager').getInstance().getCurrentSceneName()));
         require('SoundManager1').instance.playButton();
         cc.NGWlog('onClickInFo');
+        if(this.id === 0) this.id = GameManager.getInstance().user.id;
             require('NetworkManager').getInstance().sendSearchFriendRequest(this.id);
             Global.TopListView.fid = this.fid;
     },

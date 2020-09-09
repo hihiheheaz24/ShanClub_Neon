@@ -64,7 +64,6 @@ window.Global = {
     GiftView:null,
     FeedBackView:null,
     QuickChatCasino:null,
-    CashOutView:null,
     GroupOptionInGame:null,
     TopGameView: null,
     TopListView: null,

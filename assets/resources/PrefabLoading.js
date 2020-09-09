@@ -47,7 +47,6 @@ cc.Class({
         giftView: cc.Prefab,
         registerPop: cc.Prefab,
         quickChatCasino: cc.Prefab,
-        cashOutPop: cc.Prefab,
         playerViewCasinoPf: cc.Prefab,
         groupOptionInGamePf: cc.Prefab,
         chipOnline: cc.Prefab,

@@ -145,8 +145,6 @@ cc.Class({
         // ]
 
         let len = require("GameManager").getInstance().listAgDT.length;
-        //cc.NGWlog("-=-=-=> cashoutView listAgDT length la " + len)
-
         for (let i = 0; i < len; i++) {
             let itemInfo = require("GameManager").getInstance().listAgDT[i];
             let obj = cc.instantiate(this.itemListCash).getComponent('ItemCashOut');

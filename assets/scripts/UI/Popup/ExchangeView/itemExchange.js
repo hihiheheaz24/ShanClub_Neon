@@ -35,7 +35,7 @@ cc.Class({
     },
     onClickExchange(){
         if(this.agCashOut > require('GameManager').getInstance().user.ag){
-            require('GameManager').getInstance().onShowConfirmDialog(require('GameManager').getInstance().getTextConfig("txt_koduchip_cashout"));
+            require('GameManager').getInstance().onShowConfirmDialog("Your chips aren't enought");
         }
         else{
             if(this.isType == 4){

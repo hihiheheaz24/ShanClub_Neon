@@ -6,11 +6,6 @@ cc.Class({
     properties: {
         lb_bets: [cc.Label],
         lb_sliderbets: [cc.Label],
-        btn_maxBet: {
-            default: null,
-            type: cc.Button
-        },
-
         backGround: {
             default: null,
             type: cc.Sprite,

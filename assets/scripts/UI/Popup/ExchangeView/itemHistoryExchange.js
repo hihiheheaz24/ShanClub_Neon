@@ -79,7 +79,7 @@ cc.Class({
                 break;
             case 4:
                 this.lbStatus.string = "Done";
-                this.lbStatus.node.color = new cc.Color(66, 70, 89);
+                this.lbStatus.node.color = new cc.Color(255, 255, 255);
                 break;
             case 5:
                 this.lbStatus.string = "Done";

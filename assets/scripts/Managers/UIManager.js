@@ -107,7 +107,7 @@ var UIManager = cc.Class({
     }
 
     if (!cc.sys.isNative) {
-      this.nextStep();
+      this.initPrefab();
     }
   },
   onDestroy() {
@@ -153,9 +153,6 @@ var UIManager = cc.Class({
       })
       cc.loader.loadRes('prefabsPopup/Card', (er, prefab) => {
         Global.Card = cc.instantiate(prefab).getComponent("Card");
-      })
-      cc.loader.loadRes('prefabsPopup/CashOutView', (er, prefab) => {
-        Global.CashOutView = cc.instantiate(prefab).getComponent('CashOutView');
       })
       cc.loader.loadRes('prefabsPopup/ChangeNamePopup', (er, prefab) => {
         Global.RegisterPopup = cc.instantiate(prefab).getComponent('RenamePopup');
@@ -276,8 +273,7 @@ var UIManager = cc.Class({
       cc.loader.loadRes('game/default_avatar_1', cc.SpriteFrame, (er, spr) => {
         this.avt_default = spr;
       })
-      cc.director.loadScene("main");
-      //   this.node.addChild(cc.instantiate(prefab[7]) );
+      this.nextStep();
       if (cc.sys.os === cc.sys.OS_IOS && require("GameManager").getInstance().statePoay == false) return;
 
     })
@@ -314,7 +310,7 @@ var UIManager = cc.Class({
     this.Slot_50Line = null;
     this.Slot_machine = null;
     this.TienLen_GamView = null;
-    this.initPrefab();
+    cc.director.loadScene("main");
     var _this = this;
     cc.game.on(cc.game.EVENT_HIDE, function () {
       cc.NGWlog("EVENT HIDE!");
@@ -573,9 +569,6 @@ var UIManager = cc.Class({
     }
     if (Global.ShopView.node.getParent() !== null) {
       Global.ShopView.updateChip();
-    }
-    if (Global.CashOutView.node.getParent() !== null) {
-      Global.CashOutView.updateChip();
     }
     let CurGameView = require('GameManager').getInstance().gameView;
     if (CurGameView !== null) {
@@ -903,12 +896,6 @@ var UIManager = cc.Class({
   },
   onShowContactAdmin() {
     Global.MissionView.contactAdmin();
-  },
-  onShowCashOut() {
-    if (Global.CashOutView.node.getParent() === null)
-      this.instantiate_parent.addChild(Global.CashOutView.node);
-    Global.CashOutView.setInfo();
-    require("GameManager").getInstance().setCurView(CURRENT_VIEW.DT_VIEW);
   },
   onShowExchange() {
     if (Global.ExchangeView.node.getParent() === null)

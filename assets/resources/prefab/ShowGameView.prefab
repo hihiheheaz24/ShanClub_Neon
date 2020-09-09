@@ -906,9 +906,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 97,
-      "g": 122,
-      "b": 97,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -971,7 +971,7 @@
     },
     "_enabled": true,
     "key": "8808",
-    "isChange": true
+    "isChange": false
   },
   {
     "__type__": "cc.PrefabInfo",

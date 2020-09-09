@@ -24,16 +24,16 @@ var HotUpdate = cc.Class({
     switch (event.getEventCode()) {
       case jsb.EventAssetsManager.ERROR_NO_LOCAL_MANIFEST:
         console.log("ko tim thay mainfest file");
-        require("UIManager").instance.nextStep();
+        require("UIManager").instance.initPrefab();
         break;
       case jsb.EventAssetsManager.ERROR_DOWNLOAD_MANIFEST:
       case jsb.EventAssetsManager.ERROR_PARSE_MANIFEST:
         console.log("loi download mainFest");
-        require("UIManager").instance.nextStep();
+        require("UIManager").instance.initPrefab();
         break;
       case jsb.EventAssetsManager.ALREADY_UP_TO_DATE:
         console.log("Phien ban moi nhat");
-        require("UIManager").instance.nextStep();
+        require("UIManager").instance.initPrefab();
         break;
       case jsb.EventAssetsManager.NEW_VERSION_FOUND:
         console.log("Co phien ban moi! Co muon update ko?");
@@ -118,7 +118,7 @@ var HotUpdate = cc.Class({
       }
       this._updating = false;
       this.loadingBar.node.active = false;
-      require("UIManager").instance.nextStep();
+      require("UIManager").instance.initPrefab();
     }
     if (needRestart) {
       if (this._updateListener) {
@@ -175,8 +175,9 @@ var HotUpdate = cc.Class({
     cc.eventManager.addListener(this._checkListener, 1);
     this._am.checkUpdate();
     this._updating = true;
+    require("UIManager").instance.initPrefab();
     this.scheduleOnce(() => {
-        require("UIManager").instance.nextStep();
+      // require("UIManager").instance.nextStep();
     }, 5)
   },
 

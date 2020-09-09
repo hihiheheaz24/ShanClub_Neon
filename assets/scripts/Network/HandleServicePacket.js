@@ -545,8 +545,10 @@ var HandleServicePacket = cc.Class({
                         break;
                     }
                     case 'cashOutHistory': {
-                        if (Global.ExchangeView.node.getParent() !== null ) {
-                            Global.ExchangeView.reloadListHistory(jsonData.history);
+                        if (Global.ExchangeView.node.getParent() !== null) {
+                            // Global.ExchangeView.reloadListHistory(jsonData.history);
+                            Global.ExchangeView.dataHis = jsonData.history;
+                            Global.ExchangeView.reloadListHistory();
                         }
                         break;
                     }
