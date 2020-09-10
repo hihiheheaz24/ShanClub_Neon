@@ -56,14 +56,11 @@ var SearchFriendView = cc.Class({
     },
     editBoxTextChanged: function (sender, text) {
         let strTemp = "";
-        for (let i = 0; i < text.string.length; i++) {
-            if (text.string.charAt(i) >= 0 && text.string.charAt(i) <= 9) {
-                strTemp += text.string.charAt(i)
-            }
-        }
-        if (strTemp == "") return;
-        this.stringTotal = parseInt(strTemp);
-        this.ed_box.stirng = GameManager.getInstance().formatNumber(this.stringTotal);
+        for (let i = 0; i < text.string.length; i++)
+            if (text.string.charAt(i) >= 0 && text.string.charAt(i) <= 9)
+                strTemp += text.string.charAt(i);
+        // if (strTemp == "") return;
+        this.ed_box.string = strTemp;
     },
 });
 module.exports = SearchFriendView;

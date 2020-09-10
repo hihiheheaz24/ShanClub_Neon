@@ -128,7 +128,7 @@ var ShanGameView = cc.Class({
         this.is_show_border_dealer = false;
         this.isChangeCardToNormal = false;
         this.codeArr = [];
-        
+        this.countUpVip = 0;
     },
 
     handleCTable (strData){
@@ -1132,6 +1132,9 @@ var ShanGameView = cc.Class({
                 this.clearBets(resultArray);
                 this.clearPoint();
                 this.stateGame = STATE_GAME.WAITING;
+                this.countUpVip++;
+                if (require('GameManager').getInstance().user.vip < 1 && this.countUpVip >= 2)
+                    require('NetworkManager').getInstance().sendUpVip();
             },4000)
             this.setTimeout(()=>{
                 this.showPotValue(data.pot);

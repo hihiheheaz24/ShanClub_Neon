@@ -873,6 +873,7 @@ var NetworkManager = cc.Class({
         }
 
         Global.TopRichView.updateList();
+        Global.FriendPopView.init();
     },
 
     onGetHistorySafe() {

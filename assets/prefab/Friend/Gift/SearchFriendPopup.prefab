@@ -470,7 +470,7 @@
     "editingReturn": [],
     "_N$backgroundImage": null,
     "_N$returnType": 4,
-    "_N$inputFlag": 1,
+    "_N$inputFlag": 5,
     "_N$inputMode": 2,
     "_N$fontSize": 30,
     "_N$lineHeight": 40,
@@ -490,7 +490,7 @@
       "b": 127,
       "a": 255
     },
-    "_N$maxLength": 10,
+    "_N$maxLength": 20,
     "_N$stayOnTop": false
   },
   {
@@ -637,12 +637,14 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 22,
+    "_actualFontSize": 25,
     "_fontSize": 30,
     "_lineHeight": 35,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c33c7ebc-fad8-4c8f-9179-6318c2df6a35"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "ស្វែងរក ID មិត្តភក្កិ...",
     "_N$horizontalAlign": 1,

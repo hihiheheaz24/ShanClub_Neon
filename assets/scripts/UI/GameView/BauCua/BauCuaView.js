@@ -167,6 +167,7 @@ var BauCuaView = cc.Class({
 
     onLoad() {
         this._super();
+        this.countUpVip = 0;
         this.nodeGroupMenu.onHideItem(1);
         this.nodeGroupMenu.onHideItem(5);
         //Config game
@@ -857,6 +858,15 @@ var BauCuaView = cc.Class({
                     cc.NGWlog('set lai status game ========= bau cua=======================================')
                     this.stateGame = STATE_GAME.WAITING;
                 }));
+                //upvip
+                if (require('GameManager').getInstance().user.vip < 1 && this.countUpVip >=2){
+                    setTimeout(() => {
+                        this.myMoney.string = GameManager.getInstance().formatNumber(require('GameManager').getInstance().user.ag);   
+                        this.thisPlayer.ag =  require('GameManager').getInstance().user.ag;    
+                    }, 2000);
+                    require('NetworkManager').getInstance().sendUpVip();
+                }
+                this.countUpVip++;
 
                 this.aniNode.runAction(act)
             }

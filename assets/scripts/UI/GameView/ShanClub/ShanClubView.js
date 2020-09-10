@@ -68,6 +68,7 @@ var ShanClubGameView = cc.Class({
     },
 
     onLoad() {
+        this.countUpVip = 0;
         this.listPosView[7] = null;
         this._super();
         this.List_Bg_Result = [{}, {}, {}, {}, {}, {}, {}, {}];
@@ -185,7 +186,7 @@ var ShanClubGameView = cc.Class({
                 this.OpenCardViewing(1, "SystemDealer", data.scoreDealer, data.rateDealer, data.ArrDealer);
             }
         }
-        
+        this.Node_Toggle.active = false;
         this.updatePositionPlayerView();
     },
 
@@ -323,6 +324,7 @@ var ShanClubGameView = cc.Class({
         }
     },
     ViewIng(lisP) {
+        this.isTurnOnToggle = false;
         this.resetToggleList();
         let checkBeforeLc = false;
         let checkBet = false;
@@ -627,6 +629,9 @@ var ShanClubGameView = cc.Class({
             this.resetGameDisPlay();
             if (cc.sys.localStorage.getItem("isBack") == 'true') require('NetworkManager').getInstance().sendExitGame();
             require('HandleGamePacket').NextEvt();
+            this.countUpVip++;
+            if (require('GameManager').getInstance().user.vip < 1 && this.countUpVip >= 2)
+                require('NetworkManager').getInstance().sendUpVip();
         }, 6500);
     },
     instantiateEffWinLose(indexDyn, chip) {

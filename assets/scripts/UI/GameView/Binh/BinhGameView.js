@@ -253,6 +253,7 @@ var BinhGamView = cc.Class({
 
     onLoad() {
         this._super();
+        this.countUpVip = 0;
         this.cardDefine = this.getCard();
         this.timeToStart = 0;
         this.remainingTime = 0;
@@ -1621,7 +1622,9 @@ var BinhGamView = cc.Class({
             if (item == 'true') require('NetworkManager').getInstance().sendExitGame();
         }
         
-        
+        this.countUpVip++;
+        if (require('GameManager').getInstance().user.vip < 1 && this.countUpVip >=2)
+            require('NetworkManager').getInstance().sendUpVip();
     },
 
     finishGame(strData) {

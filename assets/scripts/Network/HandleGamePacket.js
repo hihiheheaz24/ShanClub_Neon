@@ -72,7 +72,8 @@ var HandleGamePacket = cc.Class({
         handleGame(data) {
             var dataJson = JSON.parse(data);
             var evt = dataJson.evt;
-            let list = [GAME_ID.ROULETTE, GAME_ID.BLACKJACK, GAME_ID.BACCARAT,GAME_ID.SHAN_PLUS];
+            let list = [GAME_ID.ROULETTE, GAME_ID.BLACKJACK, GAME_ID.BACCARAT,GAME_ID.SHAN_PLUS,
+                GAME_ID.SHANKOEMEE,GAME_ID.BINH,GAME_ID.BAUCUA,GAME_ID.BACCARAT];
             if (evt === 'finish' && !list.includes(GameManager.curGameId)) {
                 if (GameManager.curGameId === GAME_ID.BAUCUA || GameManager.curGameId === GAME_ID.SESKU) {
                     var winData = JSON.parse(dataJson.data);

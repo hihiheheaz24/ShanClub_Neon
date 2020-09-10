@@ -394,6 +394,7 @@ var GameView2 = cc.Class({
         this.node.addChild(this.thisPlayer._playerView.node, GAME_ZORDER.Z_PLAYERVIEW);
         this.readDataPlayer(this.thisPlayer, listPlayer);
         this.thisPlayer.setHost(true);
+        if(GameManager.getInstance().curGameId !== GAME_ID.SHOW)
         this.addChatJoin(this.thisPlayer.displayName);
         this.thisPlayer.updatePlayerView();
         this.updatePositionPlayerView();

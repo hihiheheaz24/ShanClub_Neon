@@ -72,10 +72,11 @@ var BaccaratView = cc.Class({
                 this.layoutChipWin.setContentSize(cc.size(this.initLayoutSize.width, this.layoutChipWin.height));
             }
         });
+        this.countUpVip = 0;
         //de test
     },
-    addChatJoin() {
-
+    addChatJoin(nameP) {
+        this._super(nameP);
     },
     start() { },
     setInfoGameStart() {
@@ -532,8 +533,9 @@ var BaccaratView = cc.Class({
         // resolve Card
         for (let i = 0; i < this.finishData.results.length; i++) {
             if (this.finishData.results[i].pid === this.thisPlayer.id) {
-                if (require('GameManager').getInstance().user.vip < 1)
-                    require('NetworkManager').getInstance().sendUpVip();
+                this.countUpVip++;
+                if (require('GameManager').getInstance().user.vip < 1 && this.countUpVip >=2)
+                require('NetworkManager').getInstance().sendUpVip();
             }
         }
         for (let i = 0; i < this.listcard.length; i++) {
