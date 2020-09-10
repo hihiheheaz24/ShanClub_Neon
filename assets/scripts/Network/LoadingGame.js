@@ -486,7 +486,7 @@ var LoadingGame = cc.Class({
     if (doc.is_xs != null)
       GameManager.getInstance().is_xs = doc.is_xs;
     else
-      GameManager.getInstance().is_xs = true;
+      GameManager.getInstance().is_xs = false;
 
     if (doc.vip_rename != null)
       GameManager.getInstance().vip_rename = doc.vip_rename;

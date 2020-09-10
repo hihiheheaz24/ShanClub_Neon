@@ -128,6 +128,7 @@ cc.Class({
                 }
                 this.arrFollow.push(followData);
             }
+            this.updateList();
         }
     },
 

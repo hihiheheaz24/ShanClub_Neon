@@ -266,7 +266,7 @@ var GameManager = cc.Class({
 		isVerifyMobile: false,
 		is_bl_fb: false,
 		is_mission: false,
-		is_bl_salert: true,
+		is_bl_salert: false,
 		isBn: false,
 		allowPushOffline: false,
 		isLoginSucces: false,

@@ -309,7 +309,20 @@ cc.Class({
       content = content.substring(0, 28) + "...";
     }
     cc.NGWlog("content la== " + content);
+    ///
+    var unified_emoji_ranges = ['\ud83c[\udf00-\udfff]', '\ud83d[\udc00-\ude4f]', '\ud83d[\ude80-\udeff]'];
+
+    var reg = new RegExp(unified_emoji_ranges.join('|'), 'g');
+
+    if (content.match(reg)) {
+        cc.log("emoji found");
+        this.lbContentChatWorld.useSystemFont = true;
+    }
+    else
+        this.lbContentChatWorld.font = UIManager.instance.font_zawi;
+    ///
     this.lbContentChatWorld.string = content;
+
     if (Global.ChatWorldView.node.getParent() === null)
       this.redDotChatWorld.active = true;
   },

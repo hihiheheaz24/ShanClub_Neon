@@ -107,7 +107,7 @@ cc.Class({
         }
         this.ic_Lock_pass.node.active = false;
     },
-    setInfoVip: function (mark, player, is_select, tableId, indexx, isPrivate) {
+    setInfoVip: function (mark, player, is_select, tableId, indexx, isPrivate, is_best) {
         this.isSelect = is_select;
         this.cur_mark = mark;
         this.table_id = tableId;
@@ -123,6 +123,9 @@ cc.Class({
             this.bg_Select.node.color = new cc.Color(127.5, 127.5, 127.5);
             this.ic_Lock.node.active = true;
         } else {
+            if (is_best === true) {
+                this.ic_best.node.active = true;
+            }
         }
 
         //cc.NGWlog("====================> isPrivate ====> ", isPrivate);

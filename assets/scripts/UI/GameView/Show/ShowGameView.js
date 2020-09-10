@@ -276,9 +276,38 @@ var ShowGameView = cc.Class({
         this.viewIng(listPlayer, data);
 
         for (var i = 0; i < listPlayer.length; i++) {
-            if (data.N == require('GameManager').getInstance().user.uname) {
+            if (listPlayer[i].N == require('GameManager').getInstance().user.uname) {
                 this.myChipCur = data.AG;
                 this.myChipStack = data.chipStack;
+                //////
+                if (this.thisPlayer.vectorCardP1.length == 4) {
+                    if (this.thisPlayer.is_ready) {
+                        this.buttonCheckToggle.node.active = false;
+                        //this.NodeBet.node.active = false;
+                        setTimeout(() => {
+                            if (this.node == null || typeof this.node == 'undefined') return;
+                            this.lbChangeCard.active = true;
+                            this.bg_arrow_swap.node.active = true;
+                            this.schedule(function(){
+                                this.bg_arrow_swap.node.runAction(
+                                    cc.sequence(
+                                        cc.moveTo(0.4,cc.v2(0,0)).easing(cc.easeCubicActionOut()),
+                                        cc.delayTime(0.05),
+                                        cc.moveTo(0.15,cc.v2(0,-25)).easing(cc.easeCubicActionOut()),
+                                    )
+                                )
+                            },0.6,10)
+                        }, 500);
+        
+                        this.thisPlayer.vectorCardP1[3].setDark(true, this.spriteFrameMask);
+                        this.NodeChangeTime = cc.instantiate(this.NodeCountDownPf).getComponent('CountDownTime');
+                        this.NodeChangeTime.node.position = cc.v2(0, 10);
+                        this.NodeChangeTime.setInfo(8, 3);
+                        this.node.addChild(this.NodeChangeTime.node, GAME_ZORDER.Z_CARD);
+                        this.scheduleOnce(() => { this.onclickCancel() }, 7.5);
+                    }
+                }
+                //////
             }
         }
     },

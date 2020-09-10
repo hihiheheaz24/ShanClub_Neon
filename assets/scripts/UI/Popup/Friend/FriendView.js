@@ -62,7 +62,6 @@ cc.Class({
         this.isChecked = false;
     },
     setInfo() {
-        require('TrackingManager').SendTracking(TRACKING_TYPE.ClickFriend);
         this.btn_shareCode.node.active = require("GameManager").getInstance().ismaiv;
         this.lb_share_code.node.active = require("GameManager").getInstance().ismaiv;
 
@@ -200,8 +199,8 @@ cc.Class({
     onClickShare() {
         // onTakeScreenShot
         // require('Util').shareCodeMessage(require('GameManager').getInstance().user.id);
-        require('Util').shareCodeMessage(require('GameManager').getInstance().user.id + "\n" + GameManager.getInstance().newest_versionUrl);
-        require('SMLSocketIO').getInstance().emitSIOCCC(cc.js.formatStr("ClickShareCodeSms_%s", require('GameManager').getInstance().getCurrentSceneName()));
+        // require('Util').shareCodeMessage(require('GameManager').getInstance().user.id + "\n" + cfManager.newest_versionUrl);
+        // require('SMLSocketIO').getInstance().emitSIOCCC(cc.js.formatStr("ClickShareCodeSms_%s", require('GameManager').getInstance().getCurrentSceneName()));
     },
 
 });

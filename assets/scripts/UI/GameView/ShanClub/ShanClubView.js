@@ -712,9 +712,11 @@ var ShanClubGameView = cc.Class({
                     rotate += offsetRotation;
                     posFirtCard = cc.v2(posFirtCard.x + offset, posFirtCard.y);
                 }
+                cc.log("chay vao shan+ if  :: ", rate);
                 this.SetEfftResult(indexPDyn, this.HamTinhDiem(score), rate, arrC.length);
             } else {
                 this.is_my_turn = true;
+                this.SetEfftResult(indexPDyn, this.HamTinhDiem(score), rate, arrC.length);
             }
 
         } else {
@@ -739,6 +741,7 @@ var ShanClubGameView = cc.Class({
                 rotate += offsetRotation;
                 posFirtCard = cc.v2(posFirtCard.x + offset, posFirtCard.y);
             }
+            cc.log("chay vao shan+ else  :: ", rate);
             this.SetEfftResult(7, this.HamTinhDiem(score), rate, arrC.length);
         }
     },

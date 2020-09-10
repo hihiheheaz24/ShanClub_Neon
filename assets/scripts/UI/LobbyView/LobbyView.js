@@ -461,13 +461,15 @@ cc.Class({
             var isSelect = agPLayer >= ltv_data.chip_require ? true : false;
             var isBest = false;
             if (agPLayer >= ltv_data.chip_require) {
-                if (i < lengt - 1 && agPLayer < arrListRoom[i + 1].chip_require) {
-                    isBest = true;
-                }
-                else{
-                    if(i==lengt-1){
+                if (i <= lengt - 1 ) {
+                    if(i<lengt-1&& agPLayer < arrListRoom[i + 1].chip_require){
                         isBest = true;
+                    }else{
+                        if(i==lengt-1){
+                            isBest = true;
+                        }
                     }
+                   
                 }
             }
 
@@ -480,7 +482,7 @@ cc.Class({
                 }
                 itemCompoment.isVip(this.indexSprVip);
                 if (this.curMarkVip)
-                    itemCompoment.setInfoVip(ltv_data.mark, ltv_data.player, isSelect, ltv_data.table_id, count, ltv_data.isPrivate);
+                    itemCompoment.setInfoVip(ltv_data.mark, ltv_data.player, isSelect, ltv_data.table_id, count, ltv_data.isPrivate, isBest);
             } if (this.cur_tab === 1) {
                 itemCompoment.isnomal();
                 itemCompoment.setInfo(ltv_data.mark, ltv_data.chip_require, ltv_data.cur_user, isSelect, isBest, count, ltv_data.maxAgCon, ltv_data.ag);
@@ -653,6 +655,13 @@ cc.Class({
         }
         this.edbox_chat.string = "";
         this.btn_send.interactable = false;
+    },
+    editBoxTextChanged: function (sender, text) {
+        let strTemp = "";
+        for (let i = 0; i < text.string.length; i++)
+            if (text.string.charAt(i) >= 0 && text.string.charAt(i) <= 9)
+                strTemp += text.string.charAt(i);
+        this.edt_box.string = strTemp;
     },
     reuse: function () {
         this.isDataPlayer = false;

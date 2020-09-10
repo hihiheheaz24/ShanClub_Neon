@@ -80,7 +80,7 @@ cc.Class({
 
     },
     recivceData(jsonData) {
-        
+        cc.NGWlog("!> receive data ,",jsonData)
         var jsData = JSON.parse(jsonData.data);
         var item = new FriendData();
 
@@ -98,7 +98,7 @@ cc.Class({
             item.isOnline = jsData.online !== 0 ? true : false;
             item.idTable = jsData.idtable;
             item.status = jsData.status;
-            item.fid=jsData.fid;
+            item.fid=jsData.fbid;
             require("UIManager").instance.onShowFindProfile(item);
         }
     },
@@ -108,6 +108,7 @@ cc.Class({
     onLoad() {
     },
     init: function (item) {
+        cc.NGWlog("!> item",item)
         let id = item.idFriend;
         let name =item._name;
         let chip = item.agFriend;
@@ -181,6 +182,7 @@ cc.Class({
     },
     setAvatar(id, name, fid) {
         this.avatar.node.getComponent("AvatarItem").loadTexture(id, name, fid);
+        cc.NGWlog("!> ",id,name,fid)
     },
     turnOnBtn(state) {
         this.btn_add.node.active = state;
@@ -195,6 +197,7 @@ cc.Class({
         Global.MainView.updateChipAndSafe();
         if (Global.FriendPopView.node.getParent() !== null) {
             require("GameManager").getInstance().setCurView(CURRENT_VIEW.FRIEND_VIEW);
+            Global.FriendPopView.init();
         }
         else if (Global.TopListView.node.getParent() !== null) {
             require("GameManager").getInstance().setCurView(CURRENT_VIEW.TOP_VIEW);
